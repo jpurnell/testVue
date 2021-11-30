@@ -1,0 +1,51 @@
+.pgcheckout {
+  .search,
+  nav,
+  ul.global-sites,
+  #btn-search,
+  .email-signup,
+  .sitelinks{
+      display: none;
+  }
+  .content,
+  .container {
+      padding-bottom: 0;
+  }
+  .footer-wrap-top .footer {
+      border-top: 1px solid $beige
+  }
+  .main-logo {
+
+      &:before {
+          font-size: 75px;
+      }
+  }
+
+  .shop-cart {
+      margin: 11px 2% 0;
+  }
+  #main-nav {
+      height: auto;
+  }
+  .cart-btn {
+      top: 20px;
+  }
+  header {
+      padding: 0px;
+  }
+  .logo-wrapper,
+  .logo-wrapper.no-fix {
+      position: relative;
+      padding: 20px 0px;
+      .main-logo {
+          padding: 0px 0px 20px 0px;
+          position: relative;
+          display: inline-block;
+          margin-bottom: 0;
+      }
+  }
+  .cart-btn:hover,
+  .shop-cart:hover .cart-btn {
+      border-left: none;
+  }
+}

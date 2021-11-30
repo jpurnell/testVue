@@ -1,0 +1,98 @@
+// ----- 
+// Converted from quasar.variables.styl
+// Overrides default Quasar Framwork styles
+// ----- 
+
+.q-layout__section--marginal {
+	color: #000;
+	background-color: #fff !important;
+}
+
+// Q Fields
+.q-field {
+	font-size: .9em;
+  // add indent, per Steven's feedback
+  .row span {
+    padding: 8px 0 8px 8px;
+  }
+}
+.q-field__marginal {
+	font-size: 1em;
+}
+
+// Q Dialog
+.q-dialog__backdrop {
+	background: rgba(30,30,30,0.85);
+}
+.q-dialog__inner--fullwidth {
+	padding: 0;
+}
+.q-dialog {
+	pointer-events: auto;
+}
+.q-dialog__inner {
+	& > div {
+		border-radius: 0;
+	}
+}
+.q-dialog-plugin {
+	.q-card__section {
+		padding: 10px 8px;
+	}
+	.q-dialog__title {
+		margin: 0 16px;
+		text-transform: uppercase;
+		border-bottom: 1px solid #ccc;
+		// font-family: $typography-font-family;
+		font-size: 1rem;
+	}
+	.q-dialog__message {
+		padding: 20px;
+		// color: $textcolor;
+		font-size: 1rem;
+		opacity: 1;
+	}
+	.justify-end {
+		justify-content: space-between;
+	}
+}
+.q-notification__message.col {
+  text-align: center;
+}
+
+// Inputs
+.q-field__control-container {
+  // override HAH Input styling
+  input {
+    &[type="text"],
+    &[type="textarea"],
+    &[type="search"],
+    &[type="tel"],
+    &[type="email"] {
+        border: none;
+    }
+    border: none;
+    background-color: none;
+    &:focus,
+    &[type="text"]:focus,
+    &[type="textarea"]:focus,
+    &[type="tel"]:focus,
+    &[type="email"]:focus {
+        border: none;
+    }
+  }
+}
+.q-field--square .q-field__control,
+.q-field--outlined .q-field__control:before{
+  border-color: $borderColor;
+}
+.q-btn--outline:hover .q-btn__wrapper:before {
+  border-color: $black;
+}
+.q-field--dense .q-field__label {
+  color: $black;
+}
+// body.desktop .q-focusable:focus > .q-focus-helper, body.desktop .q-manual-focusable--focused > .q-focus-helper, body.desktop .q-hoverable:hover > .q-focus-helper {
+//   background: $white;
+//   border-color: $black;
+// }

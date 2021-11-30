@@ -1,0 +1,54 @@
+// This file contains all Variables and Mixins that need to be made available for multiple pages
+// Read about how this file works here: https://quasar.dev/style/sass-scss-variables
+
+// ----- HAH Framework ----- //
+
+// Imports
+@import "~src/css/base/variables",
+"~src/css/base/mixins";
+
+// Settings
+$is-us: false;
+
+// File paths
+$fonts-path: '~assets/fonts/';
+$image-path: '~assets/images/';
+
+// ----- Quasar Framwork ----- //
+
+// Colors
+$primary: $orange-brown;
+$secondary: $brown;
+$accent: $orange-brown;
+// $info: $orange;
+$textcolor: $dark-grey;
+// $activecolor: $orange;
+$borderColor: $beige;
+$borderColor2: $dark-grey;
+// $borderColor3: $light-grey;
+$brandgrey1: $grey;
+$brandgrey2: lighten($grey, 5%);
+
+// $negative: #fcebed;
+// $warning : $orange;
+
+// Type
+$typography-font-family: $open-sans;
+$typography-main-heading: $didot;
+$typography-secondary-heading: $trade-gothic-bold2;
+
+// Remove Values so they don't interfere with HAH CSS Framework
+$h1: ();
+$h2: ();
+$h3: ();
+$h4: ();
+$body1: ();
+$body2: ();
+$body-font-size: ();
+$body-line-height: ();
+
+// Breakpoints
+$breakpoint-xs: 660px;
+$breakpoint-sm: 960px;
+$breakpoint-md: 1200px;
+$breakpoint-lg: 1440px;

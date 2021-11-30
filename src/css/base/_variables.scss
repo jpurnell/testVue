@@ -1,0 +1,59 @@
+// Variables
+
+// Breakpoints
+$bp-1440 : "max-width: 1440px" ;
+$bp-1440-min : "min-width: 1440px" ;
+$bp-1200 : "max-width: 1200px" ;
+$bp-1200-min : "min-width: 1201px" ;
+$bp-1024 : "max-width: 1024px" ; //Tablet
+$bp-1024-min : "min-width: 1025px" ; 
+$bp-960 : "max-width: 960px" ;
+$bp-960-min : "min-width: 961px" ;
+$bp-768 : "max-width: 768px" ;
+$bp-768-min : "min-width: 769px" ;
+$bp-660 :  "max-width: 660px" ;
+$bp-660-min : "min-width: 661px" ;
+$bp-480 :  "max-width: 480px" ;
+$bp-400 :  "max-width: 400px" ;
+$bph-650px :  "max-height: 600px" ;
+
+//Paddings
+$padding-big:10%;
+$padding-big-tablet:5%;
+$padding-big-mobile:2%;
+$padding-bigger:12%;
+$padding-biggest:24%;
+$padding-small:50px;
+$padding-title:25px;
+$grid-padding:20px ;
+$grid-padding-mobile:2% ;
+
+// Colors
+$off-white: #f9f8f8;
+$orange-brown:#8e6919;
+$gold:#b99400;
+$dark-grey:#312a29;
+$brown: #413838;
+$beige:#c1b8b8;
+$grey:#e6e6e6;
+$white:#ffffff;
+$black:#000000;
+
+
+// Typography
+
+$open-sans:"open-sans",sans-serif;
+$didot:"linotype-didot",serif;
+$trade-gothic-regular:"Trade-Gothic-Regular", Helvetica, sans-serif;
+$trade-gothic-bold:"Trade-Gothic-Bold", Helvetica, sans-serif;
+$trade-gothic-bold2:"Trade-Gothic-Bold2", Helvetica, sans-serif;
+
+//Grid Variables
+$container-width: 1440px;
+
+// Misc
+$global-radius: 3px ;
+
+//images
+$image-path: '../../images/';
+$fonts-path: '../../fonts/';

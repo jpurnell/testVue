@@ -1,0 +1,69 @@
+.content {
+    .spa {
+        position: relative;
+        width:95%;
+        padding: 100px 0px 0px 0px;
+        @include flexDisplay;
+        img{
+            @include image-settings;
+        }
+        .branding-hero {
+            width: 58%;
+        }
+        .outer-wrap {
+            width: 42%;
+            left: 50px;
+            z-index: 1;
+            left: 0;
+            @media screen and (#{$bp-960}) {
+                left: 0;
+            }
+        }
+        .inner-wrap {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            z-index: 2;
+            .title {
+                height: auto;
+                width: 100%;
+                .bg-element {
+                    background-image: url(#{$image-path}banners/spa-bg.jpg);
+                    background-position: bottom -50px right -50px;
+                }
+                .color-bg-element {
+                    left: 0;
+                    background-image: url(#{$image-path}banners/spa-bg-color.jpg);
+                    background-position: bottom right;
+                }
+                .inner-title {
+                    @media screen and (#{$bp-1024}) {
+                        display: flex;
+                    }
+                    h2, p, span {
+                        z-index: 2;
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        height: 100%;
+                        right: 0;
+                        top: 0;
+                        width: 120%;
+                        border: 3px solid $beige;
+                        @media screen and (#{$bp-960}) {
+                             display: none;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}

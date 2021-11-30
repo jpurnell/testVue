@@ -1,0 +1,378 @@
+.main-nav{
+  clear:both;
+  float: right;
+  @include open-menu;
+  @media screen and (#{$bp-1440}) {
+    float: none;
+  }
+  @media screen and (#{$bp-1024}) {
+    float: left;
+    position: relative;
+    clear:none;
+    .menu-overlay{
+      right:auto;
+      left:-90px;
+      &.open{
+        left:0;
+        width: 100% !important;
+      }
+    }
+  }
+  .open-menu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    .pgerror &{
+      right: 58px;
+    }
+  }
+}
+#TN_l1_GiftCards {
+  padding-right: 30px;
+  &::after {
+    content: "\e936";
+    font-family: MANIcons;
+    font-size: 15px;
+    position: absolute;
+    margin-left: 5px;
+    top: 25px;
+    color: #000000;
+    speak: none;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    font-feature-settings: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @media screen and (#{$bp-1440}) {
+      font-size: 10px;
+    }
+    @media screen and (#{$bp-1024}) {
+      font-size: 15px;
+      top: 10px;
+    }
+  }
+  &:hover {
+    &::after {
+      color: $orange-brown;
+    }
+  }
+}
+@media screen and (#{$bp-1024-min}) {
+.fixed {
+  #TN_l1_GiftCards {
+    padding-right: 30px;
+    &::after {
+      font-size: 10px;
+      margin-left: 5px;
+      top: 5px;
+    }
+  }
+}
+}
+.pgcheckout {
+  .logo-wrapper {
+      padding: 30px 0px;
+      position: absolute;
+      z-index: 0;
+      line-height: normal;
+      display: inline-block;
+      transition: all 0.2s ease-in-out;
+      bottom: 0;
+      @media screen and (#{$bp-1440}) {
+        position: relative;
+        padding: 0px;
+      }
+      @media screen and (#{$bp-480}) {
+        display: block;
+    }
+  }
+}
+
+.logo-wrapper {
+  @media screen and (#{$bp-1024}) {
+  position: relative;
+  padding: 0px;
+  z-index: 0;
+  line-height: normal;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  bottom: 0;
+  }
+  @media screen and (#{$bp-480}) {
+    display: block;
+  }
+  p{
+    @media screen and (#{$bp-1440}) {
+      font-size: 1.3em;
+    }
+    @media screen and (max-width:800px) {
+      font-size:1.13em;
+    }
+    @media screen and (#{$bp-660}) {
+      font-size:.96em;
+    }
+  }
+  &.no-fix {
+    padding: 30px 0px;
+    position: absolute;
+    z-index: 0;
+    line-height: normal;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    bottom: 0;
+    @media screen and (#{$bp-1440}) {
+      position: relative;
+      padding: 0px;
+    }
+  }
+  p {
+    margin: 0;
+    font-family: $didot;
+    color: $orange-brown;
+    @media screen and (#{$bp-1024}) {
+      margin:0 0 0 56px;
+    }
+    @media screen and (#{$bp-480}) {
+      display: none;
+    }
+  }
+.main-logo {
+  padding: 0px 0px 20px 0px;
+  position: relative;
+  z-index: 0;
+  line-height: normal;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  bottom: 0;
+  background-image: url("#{$image-path}misc/man-logo.svg");
+  background-size: contain;
+  background-repeat:no-repeat;
+  width: 280px;
+  height: 40px;
+  margin: 0;
+  @media screen and (#{$bp-1024}) {
+    margin:0 0 0 56px;
+  }
+  span {
+    display: none;
+  }
+  @media screen and (max-width:800px) {
+
+      width: 250px;
+      height: 33px;
+  }
+  @media screen and (max-width:660px) {
+
+      width: 203px;
+      height: 28px;
+  }
+  @media screen and (#{$bp-480}) {
+    margin: 0 0 0 50px;
+    top: 6px;
+    padding-bottom: 10px;
+    width: 150px;
+  }
+@media screen and (max-width:400px) {
+  margin: 0 0 0 40px;
+  top: 9px;
+  width: 125px;
+}
+}
+}
+
+
+nav {
+  font-family: $didot;
+  position: relative;
+  font-size: 1.2em;
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul > li {
+    a span {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      @media screen and (#{$bp-1200}) {
+        font-size: .8em;
+      }
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        width: 0;
+        height: 4px;
+        margin: 5px 0 0;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.4s;
+        opacity: 1;
+        background-color: $orange-brown;
+        @media screen and (#{$bp-1024-min}) {
+          bottom:-5px;
+        }
+        @media screen and (#{$bp-1024}) {
+          display: none;
+        }
+      }
+    }
+    &:hover,
+    &.open {
+      a span {
+        &:before,
+        &:after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @media screen and (#{$bp-1440-min}) {
+    > ul {
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+  }
+  @media screen and (#{$bp-1024-min}) {
+    > ul {
+      @include horz-align;
+      padding: 30px 0;
+      .menu-overlay &{
+        li{
+          opacity:1;
+          transform:none;
+          padding: 0px 0px 0px 30px;
+        }
+      }
+      > li {  
+        //flex: 1;
+        //display: flex;        
+        > a{
+          flex: 1;
+          justify-content: center;
+        }
+        div{
+          display: none;
+          position: absolute;
+          z-index: 2;
+          left:0;
+          right:0;
+          zoom: 1;
+          animation-duration: 500ms;
+          animation-fill-mode: both;
+          transition: all 0.2s ease-in-out;
+          ul {
+            display: none;
+            background-color: #fff;
+            margin: 0;
+            border: none;
+            box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            text-transform: none;
+            font-family: $didot;
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 0;
+            min-height: 270px;
+            align-content: baseline;
+            li{ 
+              flex: 0 0 45%;              
+              a{
+                padding: 10px 20px;
+                display: block;
+                &:hover{
+                  color: $orange-brown;
+                }
+              }
+            }
+          }
+          height: auto;
+        } 
+        &.open div{ 
+          display: block;
+          animation-name: fadeInUp;
+        }
+        &.open ul{
+          display: flex;
+        }
+        ul li {
+          height: auto;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+
+    }
+  }
+  @media screen and (#{$bp-1024-min}) {
+    > ul {
+      width: 100%;
+      >li{
+        font-size: .8em;
+      }
+    }
+  }
+}
+
+@media screen and (#{$bp-1024-min}) {
+  .main-nav {
+    .menu-overlay{
+      width:100% !important;
+    }
+    .open-menu {
+      display: none;
+    }
+  }
+}
+
+//@include horz-align;
+@media screen and (#{$bp-1024}) { 
+  .main-nav {
+    @include overlay; 
+    nav {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      @include vert-align;
+      align-items: center;
+      justify-content: center;
+      font-size: 4em;
+      font-size: 4vw;
+      li {
+        position: relative;
+        color: #000;
+        line-height: normal; 
+        a{
+          display: block;
+          padding:12px 20px;
+        }
+        div{
+          display: none;
+        }  
+      }
+    }
+    .open-menu {
+      .icon-close {
+        position: fixed;
+      }
+    }
+  }
+}
+@media screen and (max-width:800px) { 
+  .main-nav{
+    nav{
+      font-size:1.7em;
+    }
+  }
+}

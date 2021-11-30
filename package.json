@@ -1,0 +1,44 @@
+{
+  "name": "shopmo.com",
+  "version": "0.0.1",
+  "description": "Shop M.O.",
+  "productName": "shopmo.com",
+  "cordovaId": "org.cordova.quasar.app",
+  "author": "lhuang@hotelsathome.cn <lhuang@hotelsathome.cn>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "NODE_ENV=local quasar dev"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.10.4",
+    "aos": "^2.3.4",
+    "axios": "^0.21.1",
+    "crypto-js": "^4.0.0",
+    "lodash": "^4.17.21",
+    "qrcode": "^1.4.2",
+    "quasar": "1.7.4",
+    "strip-ansi": "^6.0.0",
+    "vue-i18n": "^7.3.3"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.9.6",
+    "@quasar/quasar-app-extension-dotenv": "^1.1.0",
+    "@quasar/quasar-app-extension-qmediaplayer": "^1.2.1",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "http-proxy-middleware": "^0.20.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}

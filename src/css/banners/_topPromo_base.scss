@@ -1,0 +1,32 @@
+/* -----
+ *
+ *   Top Promo
+ *
+----- */
+
+/* -----
+Styling
+----- */
+.top-banner {
+    position: relative;
+    max-width: 1920px;
+    margin: auto;
+    background: $gold;
+    text-align: center;
+    padding: 5px;
+    p {
+        font-family: $didot;
+        color: $white;
+        font-size: .8em;
+        margin: 0;
+        span {
+            display: inline-block;
+        }
+        @media screen and (#{$bp-660}) {
+            font-size: .7em;
+        }
+        @media screen and (#{$bp-480}) {
+            font-size: .5em;
+        }
+    }
+}

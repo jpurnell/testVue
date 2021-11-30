@@ -1,0 +1,20 @@
+.mobile-cta {
+  @media screen and (max-width:530px) {
+    a span{
+      .de &, .fr & {
+        letter-spacing: .1em;
+        font-size: .6em;
+        font-size: 2.35vw;
+      }
+    }
+  }
+  @media screen and (max-width:570px) {
+    a span{
+      .es & {
+        letter-spacing: .1em;
+        font-size: .6em;
+        font-size: 2.35vw;
+      }
+    }
+  }
+}

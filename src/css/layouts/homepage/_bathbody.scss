@@ -1,0 +1,81 @@
+.content {
+    .bath-body {
+        position: relative;
+        padding:100px 0px 0px 0px;
+        width:100%;
+        max-width: 1740px;
+        margin: auto;
+        @include flexDisplay;
+        @media screen and (#{$bp-960}) {
+            padding: 50px 0px 0px 0px;
+        }
+        img{
+            @include image-settings;
+        }
+        .branding-hero {
+            width: 58%;
+        }
+        .outer-wrap {
+            width: 42%;
+            left: 50px;
+            z-index: 1;
+            @media screen and (#{$bp-960}) {
+                left: 0;
+            }
+        }
+        .inner-wrap {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            z-index: 2;
+            .title {
+                height: 70%;
+                width: 100%;
+                @media screen and (#{$bp-960}) {
+                    height: auto;
+                }
+                .bg-element {
+                    background-image: url(#{$image-path}banners/bathbody-bg.jpg);
+                    background-position: bottom -50px left -50px;
+                }
+                .color-bg-element {
+                    right: 0;
+                    background-image: url(#{$image-path}banners/bathbody-bg-color.jpg);
+                    background-position: bottom left;
+                }
+                .inner-title {
+                    @media screen and (#{$bp-1024}) {
+                        display: flex;
+                    }
+                    h2, p, span {
+                        z-index: 2;
+                    }
+                    p {
+                        span {
+                            display: inline-block;
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        width: 120%;
+                        border: 3px solid $beige;
+                        @media screen and (#{$bp-960}) {
+                             display: none;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}

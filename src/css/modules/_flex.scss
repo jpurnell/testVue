@@ -1,0 +1,70 @@
+/*Flex Layout on HP and Category Pages */
+
+.item {
+    position: relative;
+    .stack {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        &.right-ps {
+            right: 0;
+        }
+        &.left-ps {
+            left: 0;
+        }
+    }
+    a{
+      display: block;
+      height: 100%;
+    }
+    img{
+      width:100%;
+      height:auto;
+      display: block;
+    }
+}
+.stack-wrap{
+    position: absolute;
+}
+
+.stack {
+    position: absolute;
+    @include vert-align;
+    padding: 2%;
+    top:0;
+    bottom:0;
+    z-index: 1;
+    width:100%;
+    background-color: white;
+
+    p + p[class*='btn-'],
+    h1 + p,
+    h2 + p,
+    h3 + p,
+    h4 + p{
+        margin-top: 25px;
+        @media screen and (#{$bp-1024}) {
+            margin-top:12px;
+        }
+    }
+    p{
+        margin:0;
+        width:100%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+ 
+    [class*='btn-'] {
+        width:auto;
+        line-height: 50px;
+        @media screen and (#{$bp-1024}) {
+            margin-top: 0px;
+        }
+    }
+}
+
+

@@ -1,0 +1,128 @@
+//
+// Styling for the shipping charts on the 'shipping-and-returns' page
+//
+
+.shipping-chart,
+.bed-shipping-chart {
+	display: none;
+	overflow: auto;
+}
+#zoneTable th,
+#zoneTable td {
+	padding: 5px 0;
+  vertical-align: top;
+}
+#zoneTable {
+	td {
+		border: none;
+	}
+}
+#shippingTable {
+	width: 100%;
+	text-align: center;
+}
+#shippingTableBed,
+#shippingTable {
+	border: 1px solid $borderColor;
+}
+#shippingTableBed td,
+#shippingTable td,
+#shippingTableBed th,
+#shippingTable th {
+	padding: 8px 2px;
+}
+#shippingTableBed tr:nth-child(even),
+#shippingTable tr:nth-child(even) {
+	background: $borderColor;
+}
+#shippingTableBed {
+	th {
+		text-align: left;
+	}
+  tr td + td {
+    min-width: 65px
+  }
+}
+.faq {
+	.shippingDetails {
+		width: 100%;
+		ul {
+			li {
+				&:first-child {
+					font-size: inherit;
+					color: inherit;
+				}
+			}
+		}
+		em {
+			margin: 0;
+		}
+	}
+}
+@media screen and ($bp-768) {
+  .faq {
+    .shippingDetails {
+      min-width: inherit;
+    }
+  }
+}
+.shippingDetails {
+  &.firstTable {
+    ul {
+      li {
+        display: table;
+        width: 100%;
+        &.head {
+          em {
+            color: $black;
+          }
+        }
+        em {
+          width: 16.66%;
+          text-align: center;
+          display: table-cell;
+        }
+      }
+    }
+  }
+}
+@media screen and ($bp-660) {
+  .shippingDetails {
+    &.firstTable {
+      ul {
+        li {
+          em {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }  
+}
+.pgfaq {
+	.zoneDetails {
+		ul {
+			li {
+				padding-left: 20px;
+				em {
+					width: auto;
+					display: table-cell;
+					padding-right: 25px;
+				}
+				span {
+					text-align: left;
+					display: table-cell;
+				}
+			}
+		}
+	}
+}
+.shippingDetails {
+	ul {
+		li {
+			&.head {
+				padding-top: 25px;
+			}
+		}
+	}
+}

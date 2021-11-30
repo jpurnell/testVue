@@ -1,0 +1,31 @@
+.content .bedding {
+    position: relative;
+    padding:100px 0px 0px 0px;
+    width:100%;
+    max-width: 1740px;
+    margin: auto;
+    @include flexDisplay;
+    @media screen and (#{$bp-960}) {
+        padding: 50px 0px 0px 0px;
+    }
+    img{
+        @include image-settings;
+    }
+    &.robes{
+        padding-top:0;
+    }
+}
+.bedding-products {
+    position: relative;
+    top: 100px;
+    margin-left: 50px;
+    @media screen and (#{$bp-1440}) {
+        top: 25px;
+        margin-left: 25px;
+    }
+    .bedding-product-wrap {
+        display: block;
+        position: relative;
+        background: $white;
+    }
+}

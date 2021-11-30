@@ -1,0 +1,287 @@
+.content .spa {
+  .branding-hero {
+    .swiper-button-wrapper {
+      display: none;
+    }
+  }
+}
+@media screen and (#{$bp-768}) {
+  .swiper-celeb-fans {
+    background-color: $grey;
+  }
+  h1 .title-italic {
+    margin-bottom: .5rem;
+  }
+  .pghome {
+    .content {
+      [class^=btn-] {
+        padding: 0px 20px;
+        line-height: 30px;
+        height: 30px;
+        font-size: .7em;
+        margin: 0;
+      }
+    }
+  }
+  .main-hp {
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    .img-wrap {
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+    .stack {
+      position: relative;
+      display: block;
+      width: 100%;
+      left: 0;
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      padding: 5%;
+    }
+  }
+  .hp-hero-wrap .swiper-button-wrapper {
+    top: 75%;
+    opacity: 1;
+  }
+  .title .inner-title {
+    padding: 5% 10% 5% 20px;
+  }
+  .fans-of-mo {
+    margin-top: 0;
+    width: 100%;
+    .fans-quote {
+      position: relative;
+      left: 0;
+      padding: 5%;
+    }
+    .fans-image-wrap {
+      padding-top: 5%;
+    }
+  }
+  .content .bedding, .content .exclusives {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 2% 2% 0px 2%;
+    .branding-hero {
+      width: 100%;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+    .outer-wrap {
+      width: 100%;
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      .inner-wrap {
+        display: flex;
+        padding-bottom: 2%;
+        .bedding-products, .exclusives-products {
+          width: 48%;
+          display: inline-block;
+          margin: 0;
+          top: 0;
+        }
+        .title {
+          width: 52%;
+          float: left;
+          -webkit-align-self: center;
+          -ms-flex-item-align: center;
+          align-self: center;
+        }
+      }
+    }
+  }
+  .content .spa {
+    padding: 2% 2% 0px 2%;
+    width: 100%;
+    .branding-hero {
+      .swiper-button-wrapper {
+        display: block;
+        position: absolute;
+        padding: 0px;
+        top: 50%;
+        width: 100%;
+        .swiper-button-prev {
+          position: absolute;
+          left: 0;
+          margin-left: 10px;
+          transform: translateY(-50%);
+        }
+        .swiper-button-next {
+          position: absolute;
+          right: 0;
+          margin-right: 10px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .swiper-button-wrapper {
+      display: none;
+    }
+  }
+  .hotel-exclusives-wrapper .headline-wrap {
+    padding-top: 7%;
+  }
+  .hotel-exclusives-wrapper .headline-wrap p {
+    margin-bottom: 20px;
+  }
+  .hotel-exclusives {
+    padding: 2% 2% 0px 2%;
+    .outer-exc-wrap .inner-exc-wrap {
+      min-height: auto;
+      padding: 5% 10% 5% 20px;
+      .exc-inner-title {
+        p {
+          margin-bottom: 1em;
+        }
+      }
+    }
+    .hotel-exc-img-wrap .hotel-exc-img {
+      width: 100%;
+    }
+  }
+  .gift-card-wrap {
+    padding: 0px 2% 0px 2%;
+    .inner-wrap .title .inner-title {
+      padding: 5% 10% 5% 20px;
+      p {
+        font-size: .8125rem;
+      }
+    }
+    .branding-hero {
+      padding: 0;
+    }
+  }
+  .seo-copy {
+    padding: 7% 2% 2% 2%;
+    h2, p {
+      padding: 0 10% 0 20px;
+    }
+    p {
+      font-size: .8125rem;
+    }
+  }
+  .content .bath-body,
+  .content .spa,
+  .content .little-fans {
+    padding: 7% 2% 0px 2%;
+  }
+}
+@media screen and (#{$bp-660}) {
+  .content .bath-body {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 2% 2% 0px 2%;
+    .branding-hero {
+      width: 100%;
+    }
+    .outer-wrap {
+      width: 100%;
+    }
+  }
+  .content .spa {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 2% 2% 0px 2%;
+    width: 100%;
+    .branding-hero {
+      width: 100%;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+    .outer-wrap {
+      width: 100%;
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+    }
+  }
+  .spa-wrapper .h2-wrap {
+    min-height: auto;
+  }
+  .content .little-fans {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 2% 2% 0px 2%;
+    .branding-hero {
+      width: 100%;
+      .img-wrap-tall {
+        width: 48%;
+        padding: 0;
+        float: right;
+      }
+      #HP_little_fans-bedding {
+        .img-wrap-tall {
+          margin-right: 2%;
+          float: left;
+        }
+      }
+    }
+    .outer-wrap {
+      width: 100%;
+      .inner-wrap .title .inner-title {
+        width: 100%;
+        .text-wrap {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (#{$bp-480}) {
+  .pghome, {
+    h1, h2 {
+      font-size: 1.4rem
+    }
+    .content {
+      h1, h2 {
+        font-size: 1.4rem
+      }
+    }
+  }
+  .title .inner-title h2 {
+    font-size: 1.4rem
+  }
+}
+@media screen and (#{$bp-400}) {
+  .content .bedding, .content .exclusives {
+    .outer-wrap {
+      .inner-wrap {
+        display: block;
+        padding-bottom: 2%;
+        .bedding-products, .exclusives-products {
+          width: 100%;
+          display: block;
+        }
+        .title {
+          width: 100%;
+          float: none;
+        }
+      }
+    }
+  }
+  .pghome, {
+    h1, h2 {
+      font-size: 1.2rem
+    }
+    .content {
+      h1, h2 {
+        font-size: 1.2rem
+      }
+    }
+  }
+  .title .inner-title h2 {
+    font-size: 1.2rem
+  }
+}

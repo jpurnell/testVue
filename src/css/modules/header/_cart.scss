@@ -1,0 +1,159 @@
+/*Header Cart */
+#shop-cart {
+  position: relative;
+  z-index: 3;
+  float: right;
+}
+
+.cart-btn {
+  margin: 0 0 0 35px;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  @media screen and (max-width: 500px) {
+    margin:0;
+  }
+}
+
+.txt-items {
+  display: none;
+}
+
+#cartSumQty {
+  position: absolute;
+  top: 24px;
+  right: -1px;
+  color: #fff;
+  background: $gold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 8px;
+  line-height: 20px;
+  text-align: center;
+  display: block;
+}
+
+.cart-btn,
+.top-link-cart {
+  &:before {
+    display: inline-block;
+    font-size: 42px;
+    line-height: 42px;
+    @include mo-icons;
+    content: "\e900";
+    @media screen and (max-width: 800px) {
+      font-size: 33px;
+      line-height: 33px;
+    }
+  }
+}
+.cart-btn strong {
+  padding-right: 5px;
+  font-weight: normal;
+}
+.drop-shopcart {
+  background: #ffffff;
+  border-top: 1px solid $beige;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  padding: 30px;
+  z-index: 2;
+  width: 500px;
+  right: 0;
+  top: 47px;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  overflow-y: auto;
+  max-height: 600px;
+
+  .hover & {
+    animation-name: fadeInUp;
+    @media screen and (#{$bp-768}) {
+      display: none;
+    }
+  }
+  .no-hover & {
+    display: none;
+    animation-name: fadeOutDown;
+  }
+
+  ul {
+    li {
+      float: left;
+      overflow: hidden;
+      display: block;
+      padding: 0;
+    }
+  }
+
+  .cart-summary {
+    padding: 0 0 26px 4px;
+    margin: 0 0 12px 0px;
+
+    text-align: right;
+    border-top: none;
+
+    li {
+      float: none;
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    padding: 12px 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #efefef;
+  }
+
+  .thead {
+    text-transform: uppercase;
+
+    font-size: 15px;
+    display: none;
+  }
+
+  li.ItemDescr {
+    width: 58%;
+    text-align: left;
+    padding: 0 0 0 10px;
+  }
+  li {
+    &.ItemDescr span {
+      display: block;
+      color: #7b7b7b;
+    }
+
+    &.Price,
+    &.Total {
+      width: 25%;
+      text-align: right;
+      float: right;
+    }
+
+    &.Qty {
+      width: 10%;
+    }
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUpOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,250 @@
+footer {
+  background-color: $brown;
+  border-top: 5px solid $orange-brown;
+  margin-top: 5%;
+}
+.footer {
+  .links {
+    font-size: 0.8em;
+    padding: 0;
+  }
+  a {
+    color: $dark-grey;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .copyright a {
+    padding: 0 0 0 12px;
+    display: inline-block;
+    color: $white;
+  }
+}
+.email-signup {
+  padding: 0 2%;
+}
+.footer-links {
+  padding: 0 2%;
+  div div {
+    flex-wrap: wrap;
+    @include horz-align;
+    align-content: space-evenly;
+    width: 100%;
+    font-size: 1.2em;
+    @media screen and (#{$bp-960}) {
+      height: auto;
+    }
+  }
+}
+.email-signup > div {
+  padding: 2% 2%;
+  @include horz-align;
+  &#ftr-email-conf2 {
+    h4 {
+      text-align: center;
+    }
+  }
+  input,
+  button {
+    float: left;
+    &.btn-main {
+      height: 55px;
+      line-height: 55px;
+      border: 0;
+    }
+  }
+  p {
+    flex: 1 1 65%;
+    margin: 0;
+    text-align: center;
+    color: $dark-grey;
+  }
+  h4 {
+    flex: 1 1 40%;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: $didot;
+    text-align: right;
+    padding: 0 50px 0 0;
+    color: $white;
+    span {
+      display: block;
+    }
+    &:before {
+      @extend %before-icons;
+    }
+  }
+  input {
+    background: $white;
+    width: 52%;
+    height: 55px;
+    color: $dark-grey;
+  }
+  @media screen and (#{$bp-1024}) {
+    display: block;
+    h4 {
+      padding:10px 0 25px;
+      text-align: center;
+    }
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @media screen and (#{$bp-768}) {
+    input {
+      width: 68%;
+    }
+  }
+  @media screen and (#{$bp-660}) {
+
+    input, button{
+        float: none;
+        display: block;
+        width:100%;
+    }
+    button{
+        margin-top:8px;
+    }
+    p{
+        flex-direction: column;
+    }
+  }
+}
+%before-icons {
+  color: $white;
+  font-size: 30px;
+  position: relative;
+  top: 4px;
+  margin: 0 10px 0 0;
+}
+.support {
+  text-transform: uppercase;
+  width: 100%;
+  p {
+    display: inline-block;
+    margin: 0 0 8px 0;
+    &.faq-link {
+      display: block;
+      padding: 7% 0 0;
+    }
+  }
+  span {
+    display: inline-block;
+  }
+  [class^="icon-"] {
+    color: $white;
+    font-family: $didot;
+    line-height: 80px;
+    @media screen and (#{$bp-1440}-416) {
+      letter-spacing: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $beige;
+    }
+    &:before {
+      @extend %before-icons;
+    }
+    &:hover:before {
+      color: $beige;
+      text-decoration: none;
+    }
+  }
+  a.icon-phone {
+    cursor: default;
+    &:hover {
+      color: $white;
+    }
+    &:hover:before {
+      color: $white;
+    }
+  }
+}
+.copyright {
+  text-align: center;
+  p {
+    margin: 2% 0;
+    color: $white;
+  }
+}
+
+.brand-logo-footer {
+  background: url(#{$image-path}misc/MO_brand_logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 212px;
+  height: 150px;
+  margin: auto;
+}
+
+@media screen and (#{$bp-1200}-100px) {
+  .footer-links,
+  .email-signup {
+    padding: 0 2%;
+  }
+  .support {
+    [class^="icon-"]:before {
+      margin: 0 12px 0 0;
+    }
+    .icon-phone,
+    .icon-chat {
+      width: 60%;
+    }
+
+    .icon-email,
+    .icon-faq {
+      width: 40%;
+    }
+  }
+  .email-signup > div input {
+    width: 62%;
+  }
+  .email-signup > div button.btn-plain {
+    padding: 0 20px;
+  }
+}
+
+
+@media screen and (#{$bp-768}) {
+  .support {
+    [class^="icon-"] {
+      line-height: 55px;
+    }
+  }
+}
+
+@media screen and (#{$bp-768}) {
+  .email-signup,
+  .footer-links {
+    width: 100%;
+  }
+  .footer-links{
+    padding:3% 4%;
+    text-align: center;
+  }
+  .footer-links div div {
+    min-height: 1px;
+    display: block;
+  }
+  .support [class^="icon-"] {
+    letter-spacing: 0;
+    float: left;
+    width:50%;
+  }
+  .support {
+    font-size: 0.8em;
+  }
+
+  .all-sites h4 {
+    text-align: center;
+    font-size: 1em;
+  }
+  .support {
+    [class^="icon-"]:before {
+      margin: 0 12px 0 0;
+    }
+
+  }
+}

@@ -1,0 +1,241 @@
+//Category Page
+.pgcategory .content {
+  h1 {
+    font-style: italic;
+    padding: 25px 0px;
+  }
+}
+.category {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  max-width: 1740px;
+  .stack {
+    position: relative;
+    padding: 0px 0px 7% 6%;
+    background-color: transparent;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    .ctg-image {
+      min-height: 1px;
+    }
+    p {
+      width: 100%;
+      &.hover-content{
+        width:auto;
+      }
+    }
+    .button {
+      display: none;
+    }
+    .btn-plain {
+      margin-top: auto;
+      align-self: center;
+    }
+  }
+  .ctg-copy {
+    background: $white;
+    p {
+      text-transform: none;
+    }
+    .stack {
+      position: absolute;
+      padding: 120px 10% 2% 5%;
+      margin-bottom: 0;
+      font-size: 1.1em;
+      padding:1% 3% 1% 127px;
+      @include vert-align;
+      @media screen and (#{$bp-960}) {
+        p{
+          display: none;
+        }
+      }
+    }
+  }
+  h3 {
+    background: $white;
+    padding: 7% 2%;
+    width: 100%;
+    position: relative;
+  }
+  &[class*="q"] {
+    .item {
+      position: relative;
+      img {
+        @include image-settings;
+      }
+    }
+  }
+
+  @media screen and (min-width: 801px) {
+    &[class*="q"] {
+      .item {
+        flex: 0 1 33.3333333%;
+      }
+    }
+    &[class*="q"] {
+      .item {
+        &.ctg-copy {
+          flex: 0 1 100%;
+        }
+      }
+    }
+  }
+  @media screen and (#{$bp-1440}) {
+    &[class*="q"] {
+      .item {
+        position: relative;
+      }
+    }
+  }
+  @media screen and (#{$bp-1024}) {
+    h3 {
+      position: static;
+      width: 100%;
+    }
+    .ctg-copy {
+      .stack {
+        padding: 2%;
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    &[class*="q"] {
+      .item {
+        flex: 0 1 33.3333333%;
+      }
+    }
+  }
+  @media screen and (#{$bp-768}) {
+    &[class*="q"] {
+      .stack {
+        padding: 0px;
+      }
+      .item {
+        margin:0;
+        padding:2%;
+        flex: 0 1 50%;
+      }
+    }
+  }
+}
+
+.ctg-seo {
+  position: relative;
+  padding: 0 15px 2% 6%;
+  max-width: 1740px;
+  margin: auto;
+  @media screen and (#{$bp-1024}) {
+    padding: $padding-big-tablet $padding-big $padding-big $padding-big;
+  }
+  @media screen and (#{$bp-960}) {
+    padding: 0 $padding-big-tablet $padding-big-tablet;
+  }
+  @media screen and (#{$bp-768}) {
+    padding: $padding-big-tablet/2 $padding-big-tablet $padding-big-tablet;
+  }
+  .ctg-img-wrap {
+    img {
+      @include image-settings;
+    }
+    @media screen and (#{$bp-1024}) {
+      img {
+        width: 89%;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .ctg-stack-wrap {
+    position: absolute;
+    left: 0;
+    bottom: 30%;
+    right: 64%;
+    top: 19%;
+    h2{
+      width:100%;
+    }
+    @media screen and (#{$bp-960}) {
+      bottom: 18%;
+      top: 9%;
+    }
+    @media screen and (max-width: 800px) {
+      position: static;
+      .stack{
+        position: relative;
+        h2{
+          font-size: 1.35em;
+          line-height: 45px;
+        }
+      }
+    }
+  }
+  .stack {
+    padding: 5% 21%;
+    background: $white;
+    @media screen and (#{$bp-1440}) {
+      padding: 2% 10%;
+    }
+    @media screen and (#{$bp-1024}) {
+      padding: 5%;
+    }
+  }
+}
+
+body {
+  // Fallback Banner Image
+  &.pgproduct, &.pgcategory {
+    .breadcrumb-element:before {
+      @media screen and (#{$bp-960}) {
+          //background-image:url(#{$image-path}banners/#{$category}-mob.jpg);
+      }             
+      @media screen and (#{$bp-660-min}) {
+          background-image:url(#{$image-path}banners/CAT-Bed-Bedding.jpg);
+      }
+    }
+  }
+  @each $category in CAT-Bed-Bedding, CAT-Bath-Spa, CAT-Fragrance, CAT-Hotel-Exclusives, CAT-Little-Fans {
+      &##{$category} .breadcrumb-element {
+        &::before {
+          @media screen and (#{$bp-960}) {
+              // background-image:url(#{$image-path}banners/#{$category}-mob.jpg);
+          }             
+          @media screen and (#{$bp-660-min}) {
+              background-image:url(#{$image-path}banners/#{$category}.jpg);
+          } 
+        }
+      }
+  }
+  &.pgBedBedding{
+    @extend #CAT-Bed-Bedding;
+  }
+  &.pgBathSpa{
+    @extend #CAT-Bath-Spa;
+  }
+  &.pgFragrance{
+    @extend #CAT-Fragrance;
+  }
+  &.pgMOSignatureGifts,
+  &.pgHotelExclusives,
+  &#CAT-Moroccan-Tassel-Towels,
+  &#Robes-MAN-410-YUKATA,
+  &#Throws-MAN-171-THROW-FAN-ECRU,
+  &#Slippers-MAN-457-SLIPR {
+    @extend #CAT-Hotel-Exclusives;
+  }
+  &.pgLittleFans,
+  &#Robes-MAN-403-VELOUR-WL-GOLD,
+  &#Slippers-MAN-457-SLIPP-WL-GOLD,
+  &#BathSpa-MAN-457-SLIPP-WL-GOLD {
+    @extend #CAT-Little-Fans;
+  }
+}
+
+
+

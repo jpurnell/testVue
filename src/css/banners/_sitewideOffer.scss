@@ -1,0 +1,83 @@
+/* -----
+ *
+ *   Fixed Pricing Promo
+ *
+----- */
+$Sitewide-Discount: Complimentary Shipping;
+/* -----
+Styling
+----- */
+@media screen and (min-width: 660px){
+    .pghome .headline .promo-wrapper {
+        display: inline;
+    }
+}
+
+/* -----
+Copy 
+----- */
+/* Home, FAQ, Cart, Search & 404 */
+.pghome, .pgfaq, #pgcart, #pgSearch, .pgerror  {
+    /* Initial */
+    .initial .promo-inner .pr-copy2 {
+        &:before {
+            content: "#{$Sitewide-Discount} ";
+        }
+        &:after {
+            content: "On All Orders";
+        }
+    }
+
+    .initial .promo-inner .pr-copy3:before {
+        display: none;
+    }
+    /* Last Call */
+    .last-call .pr-copy2:before {
+        content: "#{$Sitewide-Discount}";
+    }
+}
+.pr-name#banProdName{
+    display: none;
+}
+/* Product/Cat Pages */
+.pgcategory, .pgproduct {
+    .initial .pr-copy2 {
+        &:before {
+            content: "#{$Sitewide-Discount} ";
+        }
+        &:after {
+            content: "On All Orders";
+        }
+    }
+    
+    .last-call .pr-copy2:before {
+        content: "#{$Sitewide-Discount}";
+    }
+
+    .last-call #banProdName, .last-call .after-name{
+        display: none;
+    }
+}
+
+/* -----
+Countdown 
+----- */
+.last-call-1{
+    .pr-ends:after{
+        content: "ends Thursday";
+    }
+}
+
+.last-call-2{
+    .pr-ends:after{
+        content: "ends Tomorrow";
+    }
+}
+
+.last-call-3{
+    .pr-ends:after{
+        content: "ends Today";
+    }
+}
+
+

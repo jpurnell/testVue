@@ -1,0 +1,10 @@
+
+header.fixed {
+  nav {
+    .fr &, .es & {
+      @media screen and (max-width: 1250px) {
+        font-size: 1em;
+      }
+    }
+  }
+}

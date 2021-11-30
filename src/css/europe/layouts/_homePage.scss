@@ -1,0 +1,61 @@
+// Fix FR SPA Slide Overflow Styling
+.content .spa .inner-wrap .title {
+  @media screen and ($bp-1200-min) {
+    .fr & {
+      height: 82%;
+    }
+  }
+}
+.fr, .de, .es {
+  // Fix FR/DE/ES Quotes Overlap
+  @media screen and ($bp-768-min) and (max-width: 1060px) {
+    .fans-of-mo {
+      margin-top: 25px;
+      .fans-image-wrap {
+        width: 23%;
+      }
+      .fans-quote {
+        width: 77%;
+        left: 23%;
+      }
+    }
+  }
+  // Fix FR/DE/ES Mobile HP Layout Issues
+  @media screen and ($bp-660) {
+    &.pghome {
+      h1, h2 {
+        font-size: 1.4rem
+      }
+      .content {
+        h1, h2 {
+          font-size: 1.4rem
+        }
+      }
+    }
+    .title .inner-title h2 {
+      font-size: 1.4rem
+    }
+    .exc-inner-title {
+      min-height: 206px;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+// Fix FR/DE SEO Copy Line Overlap
+.fr, .de {
+  .seo-copy h2::after {
+    display: none;
+  }
+}
+// Fix De/ES Quotes outside of box
+.de, .es {
+  .fans-of-mo .fans-quote p {
+    @media screen and ($bp-1440-min) and (max-width: 1500px) {
+      font-size: 1.1em;
+    }
+  }
+}
+
+@import "homepage/mobile";

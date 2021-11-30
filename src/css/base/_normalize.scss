@@ -1,0 +1,191 @@
+html {
+    font-family: Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+}
+
+body {
+    margin: 0;
+    color: $dark-grey;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 1em;
+    font-family: $didot;
+    line-height: 1.25;
+    background-color: $white;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+.head-nav {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: $dark-grey;
+    &:active,
+    &:hover,
+    &:focus {
+        outline: 0;
+    }
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: normal;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: $beige;
+    color: #fff;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+pre {
+    overflow: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+    text-transform: none;
+}
+
+select {
+    text-transform: none;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button:-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    &:-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+    line-height: normal;
+}
+
+fieldset {
+    border: none;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+del,
+strike {
+    margin: 0;
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+::selection {
+    background-color:$dark-grey;
+    color: $white;
+}

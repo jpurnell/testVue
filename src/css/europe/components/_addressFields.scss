@@ -1,0 +1,27 @@
+// for src\components\address\AddressFields.vue
+
+.country-menu {
+  .q-item {
+    min-width: 321px;
+  }
+}
+.address-form .q-field {
+  @media screen and (min-width: 660px) {
+    padding-bottom: 20px;
+  }
+}
+.address-form .q-field,
+.addressInfor .q-field {
+  // ie11 fix
+  @media screen and (min-width: 660px) and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    display: block;
+    width: 100%;
+  }
+}
+.de {
+  .address1 {
+    &.q-field--error {
+      margin-bottom: 15px;
+    }
+  }
+}

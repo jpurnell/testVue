@@ -1,0 +1,55 @@
+body {
+  // BedBedding,
+    // Uses fallback - not needed
+  // &.pgLitLiterie,
+  // &.pgCamayRopadeCama {
+  //   @extend #CAT-Bed-Bedding;
+  // }
+  // BathSpa
+  &.pgBainSpa,
+  &.pgBañoySpa 
+  &.pgBadSpa,
+  &.pg卫浴 {
+    @extend #CAT-Bath-Spa;
+  }
+  // Fragrance,
+  &.pgParfumsdAmbiance,
+  &.pgFragancia,
+  &.pgRaumduft,
+  &.pg香薰 {
+    @extend #CAT-Fragrance;
+  }
+  // HotelExclusives,
+  &.pgExclusivitésMO,
+  &.pgExclusivosdeHoteles,
+  &.pgExklusiveHotelprodukte,
+  &.pg酒店精选,
+  // MOSignatureGifts,
+  &.pgCadeauxSignatureMO,
+  &.pgRegalosExclusivosMO,
+  &.pgMOGeschenke,
+  &.pg酒店精选,
+  // Moroccan-Tassel-Towels,
+  &.subpgServiettesMarocaines,
+  &.subpgToallasMoroccanTassel,
+  &.subpgMarokkanischeHandtüchermitQuasten,
+  &.subpg摩洛哥风情流苏毛巾,
+  // Yukata 
+  &#BainSpa-MAN-410-YUKATA,
+  &#BañoySpa-MAN-410-YUKATA,
+  &#BadSpa-MAN-410-YUKATA,
+  &#日式和服浴袍-,
+  // Throw
+  &#LitLiterie-MAN-171-THROW-FAN-ECRU,
+  &#CamayRopadeCama-MAN-171-THROW-FAN-ECRU,
+  &#BettBettwaren-MAN-171-THROW-FAN-ECRU,
+  &#文华东方睡床-,
+  // Slipper
+  &#BainSpa-MAN-457-SLIPR,
+  &#BañoySpa-MAN-457-SLIPR,
+  &#BadSpa-MAN-457-SLIPR,
+  &#卫浴-
+  {
+    @extend #CAT-Hotel-Exclusives;
+  }
+}

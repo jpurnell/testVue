@@ -1,0 +1,196 @@
+/* -----
+ *
+ *   Variable Pricing Promo
+ *
+----- */
+// Sale Prices
+$Lowest-Discount: 30;
+$Highest-Discount: 30;
+
+// Main Categories
+$US-Beds-Discount: 30;
+$EU-Beds-Discount: 30;
+$Beds-Discount: $US-Beds-Discount;
+$Bedding-Discount: 30;
+$Sheets-Discount: 30;
+$Maison-Discount: 30; // fragrance
+$Bath-Discount: 30;
+$Designers-Discount: 30;
+
+// Sub Categories & Logic
+$Pillows-Discount: $Bedding-Discount;
+$Pillow-Protectors-Discount: $Lowest-Discount;
+$Duvet-Cover-Discount: $Sheets-Discount;
+$Duvet-Discount: $Bedding-Discount;
+$Mattress-Toppers-Discount: $Bedding-Discount;
+$Featherbed-Protectors-Discount: $Sheets-Discount;
+$Essence-De-Sofitel-Discount: $Maison-Discount;
+$Towels-Robes-Discount: $Bath-Discount;
+
+// Home, FAQ, Cart, Search & 404
+#{$selectors-home-support} {
+    .save, .top-promo .asterisk {
+        display: none;
+    }
+    .pr-copy2 {
+        &:before {
+            content: "Refresh Your Space";
+        }
+        &:after {
+            content: "With #{$Highest-Discount}% Off";
+        }
+    }
+    .last-call .pr-copy2 {
+        &:before {
+            content: "#{$Highest-Discount}% Off";
+        }
+        &:after {
+            content: "";
+        }
+    }
+    .last-call .pr-copy2:after {
+        display: none; 
+    }
+}
+/* Category Pages */
+.promo-inner .save:before{
+    content: none;
+}
+
+/* Lowest Offer */
+.pr-copy2:before {
+    content: "#{$Lowest-Discount}% Off ";
+    white-space: pre;
+}
+
+
+#{$selectors-bed} {
+    .pr-copy2:before {
+        :lang(en) & {
+            @if ($US-Beds-Discount < 100) {
+                content: "#{$Beds-Discount}% Off ";
+            } @else {
+                content: "$#{$Beds-Discount} Off ";
+            }
+            
+        }
+    }
+    #banProdName{
+        display: none;
+    }
+    .after-name:after {
+        :lang(en) & {
+            content: ""; 
+        }
+    }
+}
+
+#{$selectors-bed-bedding} {
+    .pr-copy2:before {
+        :lang(en) & {
+            @if ($Sheets-Discount > $Bedding-Discount) {
+                content: "Up To #{$Sheets-Discount}% Off ";
+            } @else if ($US-Beds-Discount > 100) {
+                content: "$#{$Beds-Discount} Off ";
+            } @else {
+                content: "#{$Bedding-Discount}% Off ";
+            }
+        }
+    }
+    #banProdName{
+        display: none;
+    }
+    .after-name:after {
+        :lang(en) & {
+            content: "Bed and Bedding Sets"; // Bed and Bedding Sets
+        }
+    }
+}
+#{$selectors-bedding} {
+    .pr-copy2:before {
+        :lang(en) & {
+            @if ($Sheets-Discount > $Bedding-Discount) {
+                content: "Up To #{$Sheets-Discount}% Off ";
+            } @else {
+                content: "#{$Bedding-Discount}% Off ";
+            }
+        }
+    }
+}
+
+#CAT-Bedding, #CAT-Bedding-Sets {
+    .pr-copy2:before {
+        :lang(en) & {
+            @if ($Sheets-Discount < $Bedding-Discount) {
+                content: "Up To #{$Bedding-Discount}% Off ";
+            } @else {
+                content: "#{$Bedding-Discount}% Off ";
+            }
+        }
+    }
+}
+/* Pillows | US & EU | English */
+#{$selectors-pillows} {
+    .pr-copy2:before {
+        :lang(en) & {
+            content: "#{$Pillows-Discount}% Off ";
+        }
+    } 
+
+    &#Pillows-MAN-107-1 {
+        
+        .pr-copy2:before {
+            :lang(en) & {
+                content: "#{$Pillow-Protectors-Discount}% Off ";
+            }
+        }
+
+        #banProdName{
+            display: none;
+        }
+        .after-name:after {
+            :lang(en) & {
+                content: "Pillow Protectors"; // Pillow Protectors
+            }
+        }
+    }
+}
+
+/* Linens | US & EU | English */
+#{$selectors-linens} {
+    .pr-copy2:before {
+        :lang(en) & {
+            content: "#{$Sheets-Discount}% Off ";
+        }
+    }
+}
+
+/* Bath | US & EU | English */
+#{$selectors-bath}{
+    .pr-copy2:before {
+        :lang(en) & {
+            @if ($Bath-Discount > $Designers-Discount) {
+                content: "Up To #{$Bath-Discount}% Off ";
+            } @else {
+                content: "#{$Bath-Discount}% Off ";
+            }
+        }
+    }
+}
+
+#{$selectors-scent} {
+    .pr-copy2:before {
+        :lang(en) & {
+            content: "#{$Essence-De-Sofitel-Discount}% Off ";
+        }
+    }
+}
+
+/* Designers */
+#{$selectors-lifestyle} {
+    .pr-copy2:before {
+        :lang(en) & {
+            content: "#{$Designers-Discount}% Off ";
+        }
+    }
+}

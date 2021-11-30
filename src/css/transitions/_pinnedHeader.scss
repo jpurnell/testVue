@@ -1,0 +1,81 @@
+/// Header Pinning on Scroll///
+@media screen and (#{$bp-960-min}) {
+    header {
+        min-height: 150px;
+        background: $white;
+        @include all-transition(height, 0.5s);   
+    }
+    .header{
+        background:transparent;
+    }
+    .main-logo {
+        transition-property: transform, transform-origin;
+        transition-duration: .5s;
+        transition-timing-function: linear;
+    }
+    .search {
+        opacity: 1;
+        @include all-transition(opacity, 0.5s);
+    }
+    header.fixed {
+        min-height: 50px;
+        height: 59px;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        right: 0;  
+        @include prefix('box-shadow', '0px 8px 5px -9px rgba(0,0,0,0.36)', webkit ms);
+        @media screen and (#{$bp-960}) {
+            height: auto;
+        }
+        .promo-wrapper {
+            margin-top: 70px;
+        }
+        .main-logo {
+            @include prefix('transform', 'scale(.5)', webkit ms);
+            @include prefix('transform-origin', '0 0', webkit ms);
+
+            @media screen and (#{$bp-960}) {
+                @include prefix('transform', 'scale(1)', webkit ms);
+            }
+        }
+        .top-nav {
+            >li {
+                font-size: 62%;
+                @include all-transition(all, 0.5s);
+
+                > a {
+                    @media screen and (#{$bp-1200}+90px) {
+                        font-size: .9vw;
+                    }
+                }
+            }
+        }
+        .top-nav>li.hover>div>ul{
+            border-top:0;
+        }
+        .top-nav>li.hover>div{
+            top:70px;
+        }
+        #main-nav {
+            position: absolute;
+            top: -21px; 
+            left: 0;
+            right: 0;         
+        }
+        .utilities {
+            position: relative;
+            width:116px;
+            z-index: 12;
+        }
+        .search {
+            opacity: 0;
+            position: absolute;
+            right:60px;
+            .searchbox{
+                display: none;
+            }
+        }
+    }
+}

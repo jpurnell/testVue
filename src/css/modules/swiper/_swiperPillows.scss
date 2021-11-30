@@ -1,0 +1,38 @@
+.spa-wrapper {
+    .swiper-button-next,
+    .swiper-button-prev{
+        background-color: $dark-grey;
+        outline: 0;
+    }
+    .swiper-button-prev{
+        margin-right: 20px;
+    }
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled{
+        background-color: $dark-grey;
+        opacity:.5;
+        cursor: default;
+    }
+    .h2-wrap {
+        display: flex;
+        align-items: flex-end;
+        max-width: 100%; // fix for IE
+        @media screen and (max-width: 1800px) {
+            min-height: 150px;
+        }
+        @media screen and ($bp-1200) {
+            min-height: 90px
+        }
+        @media screen and ($bp-1024) {
+            min-height: 74px
+        }
+        .zh-CN & {
+          min-height: 0;
+        }
+    }
+    .inner-title p {
+      min-height: 44px;
+    }
+}
+
+

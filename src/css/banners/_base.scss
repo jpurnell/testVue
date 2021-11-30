@@ -1,0 +1,182 @@
+/*-----
+--
+-- Site banners Base Styles
+-- Should not Change much from promotion to promotion
+--
+-----*/
+
+/* ----------
+Variables
+---------- */
+// Main Categories
+$selectors-home-support: ".pghome, .pgfaq, #pgcart, #pgSearch, .pgerror";
+$selectors-bed: "#BedBedding-MAN-124-01";
+$selectors-bed-bedding: ".pgBedBedding";
+$selectors-pillows: ".subpgPillows";
+$selectors-linens: ".subpgLinens";
+$selectors-bedding: ".pgBedBedding";
+$selectors-bath: ".pgBathSpa";
+$selectors-scent: ".pgFragrance";
+$selectors-lifestyle: ".pgHotelExclusives, pgMOSignatureGifts";
+
+/* ----------
+Styling
+---------- */
+.promo-wrapper{
+    font-family: $didot;
+    max-width: 100%;
+    margin: 0 auto;
+    padding:0;
+    font-size: 1.5em;
+    letter-spacing: .133em;
+    line-height: 1.35;
+    .pghome &, .pgproduct &{
+         padding:0 0 0 $padding-big;
+        @media screen and (max-width:1840px) {
+         max-width: 100%;
+         padding:0 0 0 $padding-big;  
+       } 
+       @media screen and (#{$bp-1440}) {
+         padding:0 0 0 2%; 
+       }  
+   }
+   .pghome &{
+    @media screen and (#{$bp-768}) {
+        padding:0 2%;
+    }
+   }
+   .pgproduct &{
+    @media screen and (#{$bp-1440}) {
+        padding:0; 
+      } 
+   }
+   .container{
+    background:#e4e4e4;
+    padding:0 2%;
+    .pghome &{
+        background: $white;
+    }
+   }
+   @media screen and (#{$bp-660}) {
+        font-size:.9em;
+    }
+}
+
+.promo-inner div {
+    display: block;
+}
+
+.top-promo {
+    text-align: center;
+    span, strong {
+        font-weight: normal;
+        font-style: normal;
+        position: relative;
+        line-height: 75px;
+        // vertical-align: middle;
+    }
+    strong {
+        em {
+            font-style: normal;
+            position: relative;
+        }
+        sup {
+            font-size: 50%;
+            top: -.75em;
+        }
+    }
+    .pr-name{
+        display: inline-block;
+    }
+    .asterisk{
+        display: none;
+    }
+}
+
+#{$selectors-home-support}{
+    #banProdName{display: none;}
+}
+
+.upto{
+    content: "Up To ";
+    display: none;
+}
+/* ----------
+Show/Hide Element
+---------- */
+.pgcheckout, #pgorder {
+    .promo-wrapper {
+        display: none;
+    }
+}
+.pr-first { display: none; }
+.pr-copy1 { display: none; }
+.pr-copy2{
+    display: inline-block;
+    &:before, &:after{
+        display: inline-block;
+    }
+}
+.pr-ends { display: inline-block; }
+#{$selectors-home-support} {
+    .last-call .promo-inner strong {
+        display: none;
+    }
+}
+#{$selectors-home-support}, .CAT-Beds{
+    .promo-inner strong.percent sup {
+        display: none;
+    }
+}
+#{$selectors-home-support}, .CAT-Beds {
+    .promo-inner strong.percent:before {
+        display: none;
+    }
+}
+.subpgbedbeddingset, .pgBedding, .pgBathSpa {
+    .promo-inner strong.dollar {
+        display: none;
+    }
+}
+.top-promo strong sup,
+.top-promo strong em {
+    display: none;
+}
+
+
+.header-wrapper .container {
+    position: relative;
+}
+
+/* -----
+Product Name Modification
+----- */
+/* Bed & Bedding */
+#{$selectors-bed},
+#{$selectors-bed-bedding}  {
+    #banProdName{
+        .currentName{display: none;}
+        .replacementName:before{
+            content: "";
+        }
+    }
+    & .last-call #banProdName{
+        .currentName{display: none;}
+        .replacementName:before{
+            content: "Beds";
+        }
+    }
+} 
+
+/* -----
+Media Queries
+----- */
+@media screen and (max-width: 660px){
+    .pghome .promo-wrapper{display: block;}
+    .promo-wrapper{margin-top: 0px; }
+    .top-promo{
+        span, strong{
+            line-height: 33px;        }
+    }
+    .promo-inner{ padding: 5px 0px; }
+}

@@ -1,0 +1,142 @@
+// ----- 
+// Extra Styling Needed for EU Sites
+// ----- 
+
+.fixed-top,
+.absolute-top {
+	z-index: 999;
+}
+
+// Add extra spacing below footer to prevent overlap with footer bar
+.footer-bar-active footer {
+  margin-bottom: 100px;
+}
+
+.icon-left-arrow {
+  @extend .icon-right-arrow;
+  transform: rotate(180deg);
+}
+.icon-down {
+  @extend .icon-right-arrow;
+  transform: rotate(90deg);
+}
+
+// Favi Btn
+.btn-fav {
+  position: absolute;
+  top: 2.5%;
+  padding: 0;
+  line-height: 0;
+  &:before {
+    background: none
+  }
+  .favi {
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
+  }
+}
+
+// Display Classes
+.no-mob {
+  @media screen and (max-width: 660px) {
+    display: none;
+  }
+}
+.mob-only {
+  @media screen and (min-width: 661px) {
+    display: none;
+  }
+}
+
+// Loading Styling
+.page-loading {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 63vh;
+  align-items: center;
+}
+// .template-loading {
+//    cursor: wait !important;
+// }
+.component-loading {
+  display: block;
+  clear: both;
+  min-height: 30vh;
+  svg {
+    display: block;
+    margin: 50px auto;
+  }
+}
+
+// FR Styling
+// .fr {
+//   @media screen and (max-width: 325px) {
+//     [class^='btn-'],
+//     [class^='btn-'] span {
+//       font-size: .8em;
+//     }
+//   }
+// }
+
+// Q-field Error
+.menu-overlay,
+#pgCheckout {
+  .q-field--error {
+    margin-bottom: 24px;
+  }
+}
+
+.footer-bar {
+  background: $white;
+  padding: 25px;
+  flex-direction: column;
+  border-top: 1px solid #efefef;
+  & > div {
+    padding-bottom: 15px;
+    line-height: 1em;
+  }
+  a {
+    width: 100%;
+  }
+  .link-btn {
+    line-height: 50px;
+  }
+  .link-btn-2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    @media screen and ($bp-660-min) {
+      width: auto;
+      min-width: 410px;
+    }
+  }
+  // Cart Page
+  .pgcart & {
+    padding: 15px 25px 15px 25px;
+  }
+  // IOS Mobile sticky button Bugfix
+  .mobile.platform-ios & {
+    padding-bottom: 9.2vh;
+  }
+}
+
+// Update Help Menu Element Height to account for FR/DE/ES
+.faq-support a {
+  min-height: 215px;
+}
+
+// Fix z-index issue with notifications and slide-in menus
+.q-notifications__list,
+.q-notifications .q-notifications__list {
+  z-index: 99999999;
+}
+
+.cursor-progress,
+.cursor-progress a,
+.cursor-progress [class^='btn-'],
+.cursor-progress div {
+  cursor: wait !important;
+}

@@ -1,0 +1,80 @@
+
+.account-btn-area {
+    float: right;
+    position: relative;
+    @include overlay;
+    @include open-menu;
+    .icon-user:before {
+      font-size: 34px;
+      line-height: 34px;
+      // top: 3px;
+      position: relative;
+    }
+    .open-menu .icon-close {
+      @media screen and ($bp-1024) {
+        position: fixed;
+        top: 15px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+}
+.menu-overlay .account-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 140px 12% 3% 20%;
+    overflow: scroll;
+    @media screen and ($bp-480) {
+      padding: 140px 0 3% 0;
+    }
+    @media screen and (max-height: 820px) {
+      padding-top: 70px;
+    }
+    width: 100%;
+    h4,
+    &.has-login-panel p {
+      font-size: 1.5em;
+    }
+    h4 {
+      text-transform: uppercase;
+      padding: 10px 0;
+    }
+    p {
+      font-family: $typography-main-heading;
+    }
+    > div {
+      opacity: 0;
+      transform: translateX(90px);
+      transition-duration: 0.2s;
+      transition-delay: 0;
+      min-width: 320px;
+      position: relative;
+      > div {
+        position: absolute;
+        width: 100%;
+        @media screen and ($bp-660-min) {
+          min-width: 400px;
+        }
+        @media screen and ($bp-480) {
+          padding: 0 2% 0 2%;
+        }
+      }
+    }
+}
+.menu-overlay.open .account-panel > div {
+  transform: translateX(0);
+  opacity: 1;
+  transition: opacity 0.6s ease-out 0.2s, transform 0.6s 0.2s ease-out;
+}
+#q-app .menu-overlay.open {
+  [class^='btn-'] {
+    font-size: initial;
+  }
+  .q-field__inner .icon-close:before {
+    font-size: initial;
+    line-height: initial;
+  }
+}

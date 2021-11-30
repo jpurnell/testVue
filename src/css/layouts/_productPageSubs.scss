@@ -1,0 +1,157 @@
+/* Subscrition Styling */
+.subscribe-wrapper {
+  border-top: none;
+
+  h4 {
+    margin: 0;
+    border-bottom: none;
+    padding: 15px 4px 13px 9px;
+    cursor: pointer;
+    cursor: hand;
+    font-weight: normal;
+    &.opened:hover {
+      background: transparent;
+    }
+    .price{
+        letter-spacing: normal;
+        padding-bottom: 0;
+    }
+  }
+
+  em {
+    font-style: normal;
+  }
+
+  h4 {
+    em {
+      font-style: normal;
+      display: block;
+      padding: 4px 0 0 40px;
+      text-transform: uppercase;
+      position: relative;
+      letter-spacing: normal;
+    }
+
+    &#monthly-item em {
+        padding: 3px 0 5px 0;
+        color: $orange-brown;
+        font-size: 1.4em;
+    }
+    margin: 0;
+    padding: 0;
+
+    &.opened {
+      border: none;
+      cursor: auto;
+      outline: none;
+    }
+
+  }
+}
+
+.subscribe-wrapper h4 {
+  &.closed {
+    padding: 16px;
+    margin-top: 0;
+    position: relative;
+    background: $off-white;
+    &:before {
+        right: 17px;
+        top: 8px;
+        @include down-arrow;
+        border-color:$dark-grey;
+        position: absolute;
+        padding:10px;
+        border-width: 0 3px 3px 0;
+      }
+    span.itemTitle {
+      display: block;
+      padding-right: 33px;
+    }
+  }
+
+  &#monthly-item {
+    margin: 12px 0 8px 0;
+    padding: 15px;
+    position: relative;
+    &.opened{
+        padding:15px 0 0 0;
+    }
+  }
+
+  strong {
+    font-weight: normal;
+  }
+
+
+  &.opened .itemTitle {
+    display: none;
+  }
+}
+
+.item-subscribe {
+  p.spacing {
+    padding: 0 16px;
+  }
+
+  del,
+  strike {
+    display: block;
+  }
+
+  .addition {
+    del,
+    strike {
+      display: inline-block;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  .salePrice {
+    display: inline-block;
+  }
+}
+
+.sub-details {
+  text-decoration: none;
+}
+
+.annual {
+
+  display: block;
+
+}
+
+.subscribe-wrapper {
+  h4 sup {
+    position: relative;
+    top: -7px;
+    font-size: .5em;
+  }
+
+  .item-subscribe .subs-btn {
+    position: relative;
+  }
+}
+
+.sub-box {
+  background:$white;
+  width: 400px;
+  padding: 20px;
+  height: auto;
+  p {
+    font-size: .9em;
+    padding-top: 20px;
+  }
+  @media screen and (#{$bp-480}) {
+    width: 200px;
+  }
+}
+
+.cart-handler p.disclaimer {
+  padding: 0 0 0 0px;
+}

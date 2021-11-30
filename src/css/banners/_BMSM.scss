@@ -1,0 +1,209 @@
+/* -----
+ *
+ *   Fixed Pricing Promo
+ *
+----- */
+
+/* -----
+Styling
+----- */
+@media screen and (#{$bp-660-min}){
+    .pghome .headline .promo-wrapper {
+        display: inline;
+        a{
+            color: $black;
+        }
+    }
+
+    .pghome .bmsm-chart-hero .bmsm-header{
+        display: none;
+    }
+
+    .pghome .bmsm-chart-hero .bmsm-chart{
+        width:300px;
+    }
+
+    .bmsm-mobile{
+        display: none; 
+    }
+
+}
+
+body {
+
+    /* Initial */
+    .initial .promo-inner .pr-copy2:before {
+        content: "Save Up To $1,000. See More > ";
+    }
+
+    .initial .promo-inner .pr-copy3:before {
+        content: "";
+    }
+    /* Last Call */
+    .last-call .pr-copy2:before {
+        content: "Buy More. Save More.";
+    }
+
+    /* Countdown */
+
+    .last-call-1{
+        .pr-ends:after{
+            content: "ends Tuesday. See More >";
+        }
+    }
+
+    .last-call-2{
+        .pr-ends:after{
+            content: "ends Tomorrow. See More >";
+        }
+    }
+
+    .last-call-3{
+        .pr-ends:after{
+            content: "ends Today. See More >";
+        }
+    }
+
+
+    #banProdName, .replacementName, .after-name{display: none;}
+
+}
+
+.pghome {
+    .initial .promo-inner{ display: none;}
+
+}
+
+.promo-wrapper a{
+        color: $white;
+    }
+
+/* Chart */
+
+.bmsm-chart-hero{
+    background-color: rgba($white,0.9);
+    padding: 20px;
+
+}
+
+.bmsm-chart-hero .bmsm-chart{
+    background-color: rgba($white,0);
+    padding: 0;
+}
+
+.bmsm-mobile .bmsm-chart{
+    width:100%;
+
+}
+
+.bmsm-chart{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 400px;
+    background-color: rgba(239,239,239,1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .bmsm-header{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .bmsm-header:before{
+        content: "STACK UP YOUR SAVINGS";
+    }
+
+    .spend-header:before{
+        content: "SPEND";
+    }
+
+    .save-header:before{
+        content: "SAVE";
+    }
+
+    .cell {
+        display:table-cell;
+        width:100%;
+        padding: 5px;
+    }
+
+    .spend-col{
+        text-align: right;
+        padding-right:15px;
+    }
+
+    .save-col{
+        text-align: left;
+        padding-left:15px;
+    }
+}
+
+@media screen and (#{$bp-1500} + 25){
+    .bmsm-chart-hero{
+        transform: scale(0.75);
+    }
+    .stack.bmsm h1, .stack.bmsm h2, .stack.bmsm h3{
+        padding: 0;
+    }
+
+    .bmsm-hero-wrap{
+            padding: 8% 0 16%;
+    }
+
+    .stack.bmsm{
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (#{$bp-960} - 80){
+
+.bmsm-hero-wrap{
+            padding: 0% 0 16%;
+    }
+
+}
+
+
+@media screen and (#{$bp-660}){
+
+    .bmsm-chart{
+        width: 250px;
+    }
+    .bmsm-mobile .bmsm-chart .bmsm-header:before{
+        content: "BUY MORE. SAVE MORE.";
+    }
+}
+

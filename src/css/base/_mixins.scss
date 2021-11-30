@@ -1,0 +1,369 @@
+@mixin site-width-wrap {
+    max-width: $container-width;
+    margin: auto;
+    position: relative;
+}
+
+@mixin all-transition($type, $duration, $timing) {
+    transition-property: $type;
+    transition-duration: $duration;
+    transition-timing-function: $timing;
+}
+
+//Vendor Prefixes
+@mixin prefix($property, $value, $vendors: webkit moz ms o, $default: true) {
+    @if $vendors {
+        @each $vendor in $vendors {
+            #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+    }
+    @if $default {
+        #{$property}: #{$value};
+    }
+}
+//Top Nav Dropdown
+@mixin dropdown-menu ($col-count, $col-gap, $col-width, $col-fill) {
+    @include prefix('column-count', $col-count, moz webkit);
+    @include prefix('column-gap', $col-gap, moz webkit);
+    @include prefix('column-width', $col-width, moz webkit); 
+}
+//Icons
+@mixin mo-icons {
+    font-family: MANIcons;
+    speak:none;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+//Icons
+@function unicode($value) {
+  @return unquote('"#{$value}"');
+}
+$icons: ( 
+    "newtab": \e936, 
+    "bag": \e900,
+    "location": \e903,
+    "pillow-split": \e904,
+    "eco-friendly": \e901,
+    "quote": \e905,
+    "right-arrow": \e906,
+    "washing-machine": \e908,
+    "iron": \e902,
+    "cotton-blend": \e909,
+    "chat": \e90b, 
+    "dollar": \e913,
+    "email": \e915,
+    "envelope": \e91a,
+    "gavel": \e918,
+    "heart": \e914,
+    "heart-filled": \e92c,
+    "plane": \e90e,
+    "scroll": \e90d,
+    "trash": \e90c,
+    "truck": \e916,
+    "user": \e911,
+    "phone": \e912,
+    "faq": \e910,
+    "close": \e919,
+    "update": \e91c,
+    "payments": \e90f,
+    "padlock": \e917,
+    "checked": \e91b,
+    "unchecked": \e90a,
+    "search": \e907,
+    "menu": \e91d,
+    "allergen-free": \e91e,
+    "feather-free": \e91f,
+    "recycled": \e920,
+    "feather": \e921,
+    "drawer": \e928,
+    "cog": \e925,
+    "book2": \e923,
+    "grid": \e932,
+    "pencil": \e933,
+    "list": \e92e,
+    "eur": \e92a,
+    "aed": \e922,
+    "chf": \e924,
+    "czk": \e926,
+    "dkk": \e927,
+    "gbp": \e92b,
+    "ron": \e92d,
+    "pln": \e92f,
+    "cny": \e935,
+    "krw": \e934);
+
+@each $icon,
+$value in $icons {
+    .icon-#{$icon} {
+        &:before {
+            content: unicode($value);
+            @include mo-icons;
+        }
+    }
+}
+//Flex Layouts
+@mixin flexDisplay {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flexWrap {
+    @include prefix( 'flex-wrap',
+    'nowrap',
+    webkit ms);
+}
+@mixin horz-align {
+    display: -webkit-box;
+    @include flexDisplay;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+}
+
+@mixin vert-align {
+    @include flexDisplay;
+    @include flexWrap;
+    @include prefix('flex-direction', 'column', moz webkit);
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-direction:column;
+    
+}
+@mixin vert-align-center {
+    @include vert-align;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin top-align {
+    @include flexDisplay;
+    @include flexWrap;
+    @include prefix('flex-direction', 'row', moz webkit);
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: end;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+@mixin bot-align{
+    @include flexDisplay;
+    @include prefix('flex-direction', 'row', moz webkit);
+    @include flexWrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+@mixin down-arrow { 
+    position:relative;
+    display: inline-block;
+    width: 0;
+    padding: 3px;
+    content: '';
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 75% 75%;
+    transform-origin: 75% 75%;
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+}
+@mixin down-arrow-hover {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+@mixin right-arrow{
+    @include down-arrow;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    @include prefix('rotate', '(0 deg)', moz webkit);   
+}
+@mixin left-arrow{
+    @include down-arrow;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+@mixin txt-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .9);
+}
+
+@mixin big-drop-shadow {
+    @include prefix( 'box-shadow', '2px 2px 1px 0 rgba(0,0,0,.2)',
+    webkit ms moz);
+    border-left: 1px solid $beige;
+}
+@mixin image-settings{
+    width:100%;
+    height: auto;
+    display: block;
+}
+@mixin offscreen{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;    
+}
+
+@mixin display-grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+@mixin dropdown-menu ($col-count, $col-gap, $col-width, $col-fill) {
+    @include prefix('column-count', $col-count, moz webkit);
+    @include prefix('column-gap', $col-gap, moz webkit);
+    @include prefix('column-width', $col-width, moz webkit);
+   // @include prefix('column-fill', $col-fill, moz webkit);   
+}
+
+@mixin grid-child-span ($col-start, $col-end, $row-start, $row-end) {
+    -ms-grid-column: $col-start;
+    -ms-grid-column-span: $col-end - $col-start;
+    -ms-grid-row: $row-start;
+    -ms-grid-row-span: $row-end - $row-start;
+    grid-column: #{$col-start}/#{$col-end};
+    grid-row: #{$row-start}/#{$row-end};
+}
+
+@mixin cart-mobile{
+        ul {
+        padding: 3%;
+        li {
+            &.ItemDescr,
+            &.Price,
+            &.Qty,
+            &.Total {
+                float: none;
+                width: 60%;
+                margin-left: 0;
+                text-align: left;
+                padding: 5px 0;
+            }
+            &.ItemDescr {
+                width: 67%;
+                font-size: 1.1em;
+                .pgcheckout &{
+                   width: 95%; 
+
+                }
+            }
+            &:before {
+                color: $dark-grey;
+                width: 90px;
+                display: inline-block;
+            }
+            &.Price:before {
+                content: "Price: ";
+                vertical-align: top;
+            }
+            &.Qty:before {
+                content: "Quantity: ";
+            }
+            &.Total:before {
+                content: "Total: ";
+            }
+        }
+        &.head {
+            display: none;
+        }
+    }
+}
+@mixin overlay{   
+   .menu-overlay{
+        position: fixed;
+        top: 0;
+        right:0;
+        height: 100%;
+        background: -moz-linear-gradient(top,  rgba($white,1) 0%, rgba($white,0.9) 100%);
+        background: -webkit-linear-gradient(top,  rgba($white,1) 0%,rgba($white,0.9) 100%);
+        background: linear-gradient(to bottom,  rgba($white,1) 0%,rgba($white,0.9) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bfffffff',GradientType=0 );
+        height: 100vh;
+        width:0;
+        z-index: -2;
+        box-shadow: -7px 0px 34px -11px rgba(0,0,0,0.52);
+        &.open{
+            z-index: 99999998;
+        }
+
+    }
+} 
+@mixin open-menu {
+    .open-menu{
+        position: relative;
+        [class^="icon-"]{
+            @include mo-icons;
+            position: absolute;
+            &:before{
+                font-size: 42px;
+                line-height: 42px;
+                @media screen and (max-width:800px) {
+                    font-size: 33px;
+                    line-height: 33px;
+                }
+            }
+        }
+        span:first-child{
+            transition: opacity .3s, transform .3s;
+            strong{
+                display: none;
+            }
+        }
+        span:last-child{
+            transition: opacity .3s, transform .3s;
+            transform: rotate(-180deg) scale(.5);
+            opacity: 0;
+        }
+        &.active{
+            box-shadow:  20px 15px rgba(0,0,0,0.15);
+            span:last-child {
+                transform: rotate(0deg) scale(1);
+                opacity: 1;
+                z-index: 99999999;
+            }
+            span:first-child {
+                transform: rotate(180deg) scale(.5);
+                opacity: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,1070 @@
+/*Checkout*/
+
+.pgcheckout {
+    .tagline h2 {
+        background: transparent;
+       
+    }
+h1{
+    padding: 2% 0;
+}
+input[type=checkbox] {
+    top: 10px;
+}
+}
+
+.checkout {
+    padding: 0 3% 3% 3%;
+    background: $white;
+    p, .par {
+        padding: 0 3%;
+        &.same {
+            margin: 0;
+            background: $white;
+            padding: 15px 3%;
+        }
+        &.not-amz {
+            padding: 0;
+        }
+    }
+    .shipping-info p, .shipping-info .par {
+        padding-top: 1em;
+    }
+    h4 {
+
+        margin: 0;
+        padding: 12px 3%;
+    }
+
+    h2,h3{
+        line-height: normal;
+        padding:2% 4%;
+        color:$dark-grey;
+        background:rgba($beige, .5);
+        margin-bottom:0;
+        font-size:1em;
+        font-family: $didot;
+    }    
+}
+
+
+fieldset {
+    
+    margin: 0;
+    padding: 3% 0;
+    position: relative;
+}
+
+legend {
+    
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.login legend {
+    display: none;
+}
+
+
+fieldset label {
+    display: block;
+    float: left;
+    width: 170px;
+    padding: 5px 8px 0 0;
+}
+
+.login,
+.shipping,
+.shipping-info {
+    background: $white;
+    border:1px solid rgba($beige, .5);
+}
+
+.checkout {
+    @include site-width-wrap;
+    margin-bottom: 3%;
+    input {
+        &[type="text"],
+        &[type="textarea"],
+        &[type="email"],
+        &[type="tel"] {
+            width: 55%;
+            border-bottom-color: transparent;
+            border:1px solid rgba($beige, .5);
+        }
+    }
+    .btn-plain{
+        border:1px solid $beige;
+    }
+    select {
+        width: 55%;
+        border:1px solid rgba($beige, .5);
+ 
+    }
+    .isWebkit select {
+        padding-right: 25px;
+    }
+    .pay {
+        margin: 12px 0;
+        float: right;
+        width: 50%;
+    }
+    .delivery {
+        list-style: none;
+        margin: 0 20px;
+        padding: 0;
+        clear: both;
+        font-size: 1.1em;
+    }
+}
+
+.delivery li {
+    display: block;
+    margin: 0 0 0 0;
+    position: relative;
+}
+
+.shipping-initial {
+    padding: 0 3% 15px 3%;
+    p strong {
+        margin-right: 2%;
+        display: inline-block;
+        font-weight: normal;
+    }
+}
+
+p.selected-initial {
+    margin: 0;
+}
+
+.free-shipping-active {
+    .selected-initial span span,
+    #shipOptionBESTWAY a span {
+        text-decoration: line-through;
+        color: $orange-brown;
+    }
+    .selected-initial > span::after,
+    #shipOptionBESTWAY a:after {
+        content: ' FREE SHIPPING';
+        color: $orange-brown;
+    }
+}
+
+.delivery a,
+p.selected-initial {
+    display: block;
+    padding: 20px 12px 20px 37px;
+    position: relative;
+    color: $dark-grey;
+}
+
+.delivery {
+    a:hover {
+        background: $beige;
+
+    }
+    li.selected a {
+        background: $beige;
+        color: $dark-grey;
+        cursor: default;
+        position: relative;
+    }
+}
+
+p.selected-initial {
+
+    color: $dark-grey;
+    cursor: default;
+    position: relative;
+    font-family: $didot;
+}
+
+.delivery li a:before,
+.delivery p:before,
+.delivery li.selected a:before,
+p.selected-initial:before {
+    @include mo-icons;
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    top: 16px;
+    font-size: 27px;
+    content: "\e90a";
+    color: $dark-grey;
+    z-index: 2;
+    @media screen and (#{$bp-1440}) {
+        top: 6px;
+    }
+}
+.delivery li a:before,
+.delivery p:before{
+   content: "\e91b"; 
+}
+em{
+    font-style: normal;
+}
+.delivery {
+    em {
+        font-style: normal;
+        font-family: $didot;
+    }
+}
+
+.shippingDetails {
+    float: left;
+    margin: 10px 0 20px;
+    border: 1px solid $beige;
+    background: $white;
+    min-width: 55%;
+    h4 {
+        background: $beige;
+        padding: 6px;
+        margin: 0 0 5px;
+    }
+    ul {
+        padding-left: 0;
+        li {
+            border: 1px solid rgba($beige, .5);
+            display: block;
+            float: none;
+            clear: both;
+            text-align: right;
+            padding: 5px;
+            &:nth-child(even) {
+                background: $beige;
+            }
+            em {
+                display: block;
+                float: left;
+                width: 55%;
+                font-style: normal;
+                text-align: left;
+            }
+            &:first-child {
+                font-size: 1em;
+                
+                text-transform: uppercase;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.checkout {
+    .note {
+        background: $white;
+        border: 1px dotted $dark-grey;
+        padding: 3%;
+        font-size: 0.9em;
+    }
+    #groundnotice {
+        padding: 3% 3% 3% 4%;
+    }
+}
+
+.note strong {
+    font-size: 1.3em;
+    
+    text-transform: uppercase;
+}
+
+#pgTermsConditions {
+    font-size: 0.9em;
+    color: $dark-grey;
+}
+
+.checkout .btn-drk-grey {
+    padding: 9px 20px;
+}
+
+.shopping-cart-summary,
+.customer-details {
+    background: $white;
+    margin-left: 5%;
+    border: 1px solid rgba($beige, .5);
+}
+
+.order .customer-details {
+    margin-left: 0;
+}
+
+.shopping-cart-summary {
+    ul {
+        list-style: none;
+        padding: 0;
+        padding: 2% 4%;
+        width: 100%;
+    }
+}
+
+.shopping-cart-summary .edit {
+    float: right;
+    font-size: 0.675em;
+    letter-spacing:0;
+    padding:0 12px 0 0;
+    color:$orange-brown;
+    line-height: 20px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.shopping-cart-summary .free-shipping-note {
+    text-align: center;
+    color: $orange-brown;
+    background:rgba($beige, .5);
+    padding: 15px 0;
+}
+
+.cart-view {
+    border: 1px solid rgba($beige, .5);
+    ul {
+        li {
+            display: block;
+            float: left;
+            &.Total {
+                float: right;
+            }
+        }
+        display: inline-block;
+        float: none;
+        margin: 0;
+        &:first-child {
+            font-size: 1em;
+            border-bottom: 1px solid rgba($beige, .5);
+            text-transform: uppercase;
+        }
+        li {
+            &.ItemDescr {
+                width: 44%;
+                text-align: left;
+                margin: 0;
+                span {
+                    display: block;
+                    color:rgba($dark-grey, .7);
+                }
+                br {
+                    display: none;
+                }
+            }
+            &.Qty {
+                width: 8%;
+                text-align: center;
+            }
+            &.Price {
+                width: 24%;
+                text-align: right;
+                span {
+                    display: inline-block;
+                    strike {
+                        margin-right: 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shopping-cart-summary .cart-summary {
+    width: 100%;
+    padding: 0;
+}
+
+.cart-summary {
+
+    overflow: hidden;
+    margin-bottom: 12px;
+    border-top: 1px solid $white;
+    padding: 8px 0 0 0;
+    margin-top: 0;
+    li {
+        text-align: right;
+        padding: 2% 4%;
+        overflow: hidden;
+    }
+    li {
+        &.last {
+        
+            font-family: $didot;
+        }
+        label {
+            padding: 0;
+            width: 60%;
+            text-align: right;
+            float: left;
+        }
+    }
+}
+
+.checkout select {
+    &.month {
+        width: 34.4%;
+    }
+    &.year {
+        width: 20%;
+    }
+}
+
+.payment {
+    fieldset {
+        margin-bottom: 0;
+    }
+    .conf a {
+        text-decoration: underline;
+    }
+}
+
+.promo-code {
+    margin: 2% 0 0 5%;
+    padding: 0 0 3%;
+}
+
+.checkout .promo-code p, .checkout .promo-code .par {
+    padding: 0;
+    margin: 8px 0;
+}
+
+.confirmation {
+    padding: 1%;
+    width: 600px;
+    margin: 15% auto;
+    position: relative;
+    @media screen and (#{$bp-1440}) {
+        width:400px;
+    }
+    @media screen and (#{$bp-480}) {
+        width: 300px;
+    }
+    p, .par {
+        padding: 0;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+}
+
+#pleaseWaitButtonDiv2_PleaseWaitButton1 {
+    text-align: center;
+    padding: 10px 0;
+    float: right;
+}
+
+.payment .confirmation {
+    background: $white;
+    padding: 1% 3%;
+    width: auto;
+    margin: 0;
+}
+
+.checkout p.disclaimer,
+.disclaimer {
+    font-size: 11px;
+    padding: 0;
+    text-align: right;
+}
+
+.customer-details {
+    padding: 0 0 5px 0;
+    margin-bottom: 10px;
+    ul {
+        list-style: none;
+        padding: 0;
+        clear: both;
+    }
+    li {
+        padding: 0 5%;
+        &.first {
+            padding: 1% 1% 1% 3%;
+            font-size: 1.2em;
+            border: 1px solid rgba($beige, .5);
+            margin-bottom: 8px;
+            font-family: $didot;
+            text-transform: uppercase;
+        }
+    }
+    a {
+        float: right;
+        padding-right: 5px;
+        text-decoration: none;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        ;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    li.phone a {
+        float: none;
+        padding-right: 0;
+        color: $dark-grey;
+        font-size: 1em;
+        
+    }
+}
+
+#pgorder .customer-details {
+    margin-left: 0;
+    p {
+    padding: 16px 3% 0px 3%;    
+    }
+    p strong {
+        display: block;
+    }
+}
+ 
+.pgcheckout {
+    .search,
+    nav,
+    ul.global-sites,
+    #btn-search,
+    .email-signup,
+    .sitelinks{
+        display: none;
+    }
+    .content,
+    .container {
+        padding-bottom: 0;
+    }
+    .footer-wrap-top .footer {
+        border-top: 1px solid $beige
+    }
+    .main-logo {
+
+        &:before {
+            font-size: 75px;
+        }
+    }
+
+    .shop-cart {
+        margin: 11px 2% 0;
+    }
+    #main-nav {
+        height: auto;
+    }
+    .cart-btn {
+        top: 20px;
+    }
+    header {
+        padding: 0px;
+    }
+    .logo-wrapper {
+        position: relative;
+        padding: 20px 0px;
+        @media screen and (#{$bp-480}) {
+            display: inline-block;
+          }
+        .main-logo {
+            padding: 0px 0px 20px 0px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+    .cart-btn:hover,
+    .shop-cart:hover .cart-btn {
+        border-left: none;
+    }
+}
+
+
+
+#pgTermsConditions {
+    background-color: $white;
+    padding: 15px;
+}
+
+.fancybox-inner,
+ul.mattressTerms {
+    -webkit-overflow-scrolling: touch;
+}
+
+div.mattressTerms .btn-gray {
+    display: inline;
+}
+
+.overlay div.mattressTerms {
+    display: block;
+    z-index: 1002;
+    overflow: hidden;
+}
+
+div.mattressTerms {
+    border: 3px solid $beige;
+    padding: 8px;
+    width: 310px;
+    background: $white;
+    margin: 10% auto;
+    p.button {
+        text-align: center;
+    }
+}
+
+#pgMattressCopy {
+    background: $white;
+}
+
+#pgMattressTerms hr {
+    margin: 10px 0;
+}
+
+ul.mattressTerms {
+    border: 1px solid rgba($beige, .5);
+    border-top: 1px solid $beige;
+    width: auto;
+    padding: 10px 10px 0 0;
+    margin: 0 0 10px;
+    color: $dark-grey;
+    height: 340px;
+    overflow: auto;
+    background: linear-gradient(#fff 30%, hsla(0, 0%, 100%, 0)) no-repeat local, linear-gradient(hsla(0, 0%, 100%, 0), #fff 70%) no-repeat bottom local, radial-gradient(at top, rgba(0, 0, 0, 0.2), transparent 70%) no-repeat, radial-gradient(at bottom, rgba(0, 0, 0, 0.2), transparent 70%) no-repeat bottom;
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+}
+
+.mattressTerms {
+    li {
+        margin: 0 0 10px 20px;
+        padding: 0 5px 0 0;
+        font-size: 14px;
+        list-style: disc;
+    }
+    a.btn-blue:hover {
+        color: $white;
+        text-decoration: none;
+        background: $dark-grey;
+    }
+}
+
+div.conf a:hover {
+    text-decoration: underline;
+}
+.not-amz .btn-main,
+.checkout .btn-plain{
+        padding:0 25px;
+}
+
+.bonvoy-rewards {
+	.btn-black {
+		margin: 20px 0px;
+	}
+	#bonvoyNumber {
+		height: 45px;
+	}
+	#bnChange {
+		span {
+			&.button {
+				display: block;
+			}
+		}
+	}
+    .bonvoy-tc {
+        font-size: 12px;
+    }
+}
+
+/*Amazon */
+
+.amazon-pay,
+#AmazonPayButton,
+span.or.amzP {
+    display:block;
+}
+.shipping, .billing, #checkout-email, .shipping-info{
+    display: none;
+}
+
+#amzLogout {
+    padding: 0 20px;
+    margin: 12px 0;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family:$didot;
+    border:1px solid $dark-grey;
+    &:hover {
+        background: $orange-brown;
+        border:1px solid $orange-brown;
+        a {
+            color:$white;
+        }
+    }
+    a{
+        line-height: 45px;
+        height: 45px;
+        padding:0 20px;
+        @media screen and (#{$bp-480}) {
+            font-size: 13px;
+        }
+    }
+}
+
+.login +#amzLogout {
+    padding: 0;
+}
+
+
+.amazon-pay {
+    padding: 18px 3%;
+    text-align: center;
+}
+
+
+
+#AmazonPayButton, .paypal-btn {
+    position: relative;
+    padding: 3% 15px 0 15px;
+    cursor: pointer;
+    img{
+        width:auto;
+        height:auto;
+        display:inline-block;
+    }
+}
+
+.amz-button-wrap {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#AmazonPayButton img.amzB {
+    opacity: 1;
+    margin: 8% 0 0 0;
+    width: 84%;
+    position: static;
+    height: auto;
+}
+
+.not-amz .btnd {
+    letter-spacing: normal;
+    padding: 15px 2%;
+    display: block;
+
+}
+.payP.small{
+    font-size: .6em;
+    color: rgba($dark-grey, .7);
+}
+.or {
+    display: block;
+    text-align: center;
+    padding: 10px 2%;
+    margin: auto;
+    font-family: $didot;
+    span {
+        display: inline-block;
+    }
+}
+
+.customer-details.amz {
+    > ul:first-of-type {
+        margin-top: 0;
+        > p:first-of-type {
+            background: #2b2e35;
+            color: #ffffff;
+            margin: 0;
+            padding: 2%;
+            height: 45px;
+            font-size: 1em;
+            line-height: normal;
+            text-transform: uppercase;
+            font-family:$didot;
+            letter-spacing: .2em;
+            a {
+                float: right;
+                font-size: .875em;
+                
+                padding-right: 0; 
+                &:hover {
+                   text-decoration: underline; 
+                }
+            }
+            ~ p, ~ .par {
+                margin-top: 1em; 
+                padding: 0 4%; 
+            }
+        }
+    }
+} 
+
+/*Hotel Selector */
+.filters {
+    padding: 0 0 0 3%;
+}
+.hotels {
+    padding: 0 3% 0 3%;
+    select {
+        width: 100%; 
+        height: 200px;
+        background-image: none;
+        &:after {
+            display: none;
+        }
+    }
+    .select {
+        p {
+            padding: 20px 5px 10px 5px;
+            margin: 0;
+        }
+    }
+}
+
+.hotel-selector-wrap {
+    padding: 0 0px 10%;
+    background: $beige;
+}
+
+p.panel-heading {
+    display: block; 
+    padding:4% 0 0 0; 
+    margin: 0;
+}
+.panel-block {
+    display: inline-block;
+    padding: 2% 1px;
+    &.reset-filter {
+        display: block; 
+        padding:4% 0;
+    }
+}
+.filter-selector-wrap .panel-block {
+    width: 32%;
+}
+
+.filter-selector select {
+    width: 100%;
+}
+
+
+@media screen and (#{$bp-1200}+80px) {
+    .panel-block {
+        display: block; 
+        padding: 1% 0;
+    }
+    .filter-selector-wrap .panel-block {
+        width: 100%;
+    }
+    .filters {
+        padding-right: 3%;
+    }
+}
+
+@media screen and (#{$bp-660}) {
+    .reset-filter button.right {
+        float: right;
+    }
+    .hotels .select p.left {
+        float: left;
+    }
+    .hotels select {
+            height: auto;
+    }
+}
+
+/* end Hotel Selector */
+
+/*MBB Card */
+.mbb {
+    padding: 2% 0;
+    .shopping-cart-summary {
+        border: none;
+        .mbb-image {
+            float: left;
+            width: 25%;
+            img {
+                width: 100%;
+            }
+        }
+        .mbb-text {
+            float: right;
+            width: 75%;
+            h2 {
+                background: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                padding: 0 4% 2% 4%;
+
+            }
+            p {
+                padding: 0 4%;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            span {
+                padding: 0 4%;
+                color: #b84c16;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+}
+/*End MBB Card */
+@media screen and (#{$bp-960-min}) {
+
+[id^='gbalance']{
+    input{
+        margin:24px 0 0 0;
+        }
+    }
+}
+@media screen and (#{$bp-960}) {
+
+    li.Update p a {
+        width: 100%;
+        margin: 0 3px 0 0;
+    }
+
+    .shopping-cart {
+        li.ItemImage,
+        .head li.Update {
+            display: none;
+        }
+    }
+
+    fieldset label,
+    .login fieldset label {
+        width: auto;
+        display: block;
+        float: none;
+        margin: 0 0 8px 0;
+    }
+
+    fieldset p, fieldset .par{
+        margin: 5px 0;
+    }
+
+    .login {
+        label {
+            width: auto;
+            display: block;
+        }
+        button {
+            display: block;
+            margin: 8px 0 0;
+        }
+    }
+
+    .checkout {
+        .hotel-selector {
+            .btn-main,
+            .btn-drk-grey {
+                display: block;
+                float: none;
+                margin-top: 5px;
+            }
+        }
+        input {
+            &[type=email],
+            &[type=tel],
+            &[type=text],
+            &[type=textarea] {
+                width: 100%;
+            }
+        }
+        select {
+            width: 100%;
+            &.month {
+                width: 60%;
+            }
+            &.year {
+                margin: 0;
+                width: 38%;
+            }
+        }
+        .pay,
+        .btn-plain {
+            float: none;
+            display: block;
+            width: 90%;
+            margin: 0 auto 20px auto;
+        } 
+        .btn-plain{
+            width:100%;
+            margin:auto;
+            font-size: .7em;
+        }
+    }
+
+
+    .checkout p.disclaimer,
+    .disclaimer {
+        text-align: left;
+    }
+
+    .cart-view ul {
+        border: 1px solid rgba($beige, .5);
+        li {
+            &.ItemDescr,
+            &.Price,
+            &.Qty,
+            &.Total {
+                float: none;
+                width: 60%;
+                margin-left: 0;
+                text-align: left;
+                padding: 5px 0;
+            }
+            &.ItemDescr {
+                width: 95%;
+                font-size: 1.1em;
+            }
+            &:before {
+                color: $dark-grey;
+                width: 90px;
+                display: inline-block;
+            }
+            &.Price:before {
+                content: "Price: ";
+                vertical-align: top;
+            }
+            &.Qty:before {
+                content: "Quantity: ";
+            }
+            &.Total:before {
+                content: "Total: ";
+            }
+        }
+        &:first-child {
+            display: none;
+        }
+    }
+}
+
+
+
+@media screen and (#{$bp-768}) {
+    .shopping-cart-summary,
+    .customer-details {
+        margin-left: 0;
+    }
+    .login {
+        h2 {
+            display: none;
+        }
+    }
+    .cart-summary li label{
+        text-align: left;
+    }
+    .pgcheckout .shop-cart {
+        margin-top: 0;
+        margin-right: 10px;
+    }
+
+    
+}
+
+@media screen and (#{$bp-480}) {
+    .checkout {
+        input[type=checkbox] {
+            float: left;
+            top: 0; 
+
+        }
+    }
+}

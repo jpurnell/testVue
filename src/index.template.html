@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (htmlWebpackPlugin.options.ctx.mode.cordova || htmlWebpackPlugin.options.ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>">
+    <meta name="google-site-verification" content="rTuzoeqK2xbCAQ9JM4h5LP8uIpqzPm6GVEh2-3boTTE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="shopmo.com" />
+    <link rel="icon" type="image/ico" href="statics/icons/favicon.ico?v2">
+    <link rel="stylesheet" href="https://use.typekit.net/wvt6vua.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--GA-->
+    <script defer type="text/javascript" src="statics/js/analytics.js"></script>
+    <!--//GA-->
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17319317-22"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-17319317-22');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script defer type="text/javascript" src="statics/js/swiper.js"></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=UA-17319317-22"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- DO NOT touch the following DIV -->
+    <div id="q-app"></div>
+    <% if (htmlWebpackPlugin.options.ctx.mode.ssr) { %><% } %>
+  </body>
+</html>

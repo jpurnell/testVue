@@ -1,0 +1,230 @@
+.hotel-exclusives {
+    width: 100%;
+    max-width: 1740px;
+    margin: auto;
+    .outer-exc-wrap {
+        background-image: url(#{$image-path}banners/hp-hotel-exclusives-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        &.tokyo {
+            background-image: url(#{$image-path}/banners/hp-hotel-exclusives-tokyo.jpg);
+        }
+        &.guangzhou {
+            background-image: url(#{$image-path}/banners/hp-hotel-exclusives-guangzhou.jpg);
+        }
+        &.bangkok {
+            background-image: url(#{$image-path}/banners/hp-hotel-exclusives-bangkok.jpg);
+        }
+        &.hong-kong {
+            background-image: url(#{$image-path}/banners/hp-hotel-exclusives-hong-kong.jpg);
+        }
+        &.books {
+            background-image: url(#{$image-path}/banners/hp-hotel-exclusives-books.jpg);
+        }
+        @media screen and (#{$bp-768}) {
+            min-height: 275px;
+        }
+        .inner-exc-wrap {
+            width: 80%;
+            padding: 2% 100px;
+            @media screen and (#{$bp-1024}) {
+                width: auto;
+            }
+            @media screen and (max-width: 1600px) {
+              min-height: 400px;
+            }
+            @media screen and ($bp-1200) {
+              min-height: 335px;
+            }
+            @media screen and ($bp-1024) {
+              min-height: 288px;
+            }
+        }
+    }
+    .hotel-exc-img-wrap {
+        position: relative;
+        @media screen and (#{$bp-1024}) {
+        .hotel-exc-img {
+                position: relative;
+                width: 80%;
+                left: auto;
+                padding-top: 0px;
+                margin-left: 0;
+                margin: auto;
+            }
+        .hotel-exc-img-preview {
+            display: none;
+        }
+    }
+    }
+    .hotel-exc-img-preview {
+        position: absolute;
+        width: 30%;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: calc(50% + 150px);
+        @media screen and (#{$bp-1200}) {
+            margin-left: calc(50% + 125px);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background:rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+    }
+    .branding-hero {
+        width: 58%;
+    }
+    .outer-wrap {
+        width: 42%;
+        left: 50px;
+        z-index: 1;
+        @media screen and (#{$bp-960}) {
+            left: 0;
+        }
+    }
+    .inner-wrap {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        z-index: 2;
+        .title {
+            height: 70%;
+            width: 100%;
+            @media screen and (#{$bp-960}) {
+                height: auto;
+            }
+            .inner-title {
+                @media screen and (#{$bp-1024}) {
+                    display: flex;
+                }
+                h2, p, span {
+                    z-index: 2;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    height: 100%;
+                    left: 0;
+                    width: 120%;
+                    border: 3px solid $beige;
+                    @media screen and (#{$bp-960}) {
+                         display: none;
+                    }
+                }
+            }
+        }    
+    }
+}
+.exc-inner-title {
+    h2 {
+        span {
+            display: block;
+        }
+    }
+    p {
+        width: 65%;
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 2.75rem;
+        @media screen and (#{$bp-1440}) {
+            padding: 0;
+            margin-bottom: 1.75rem;
+        }
+        @media screen and (#{$bp-960}) {
+          font-size: .6125rem;
+          margin-bottom: 1rem;
+        }
+        span {
+            display: inline-block;
+        }
+    }
+}
+@media screen and (#{$bp-1024-min}) {
+        .hotel-exclusives {
+            .hotel-exc-img-wrap {
+                .hotel-exc-img {
+                    position: relative;
+                    width: 50%;
+                    left: 100px;
+                    padding-top: 0px;
+                    margin-left: 0;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+}
+.hotel-exclusives-wrapper {
+    h2 {
+        @media screen and (#{$bp-1440}) {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+        }
+        @media screen and (#{$bp-1200}) {
+            font-size: 2.125rem;
+          }
+          @media screen and (#{$bp-960}) {
+            font-size: 1.725rem;
+            margin-bottom: .5rem;
+          }
+    }
+    .headline-wrap {
+        width: 100%;
+        max-width: 1740px;
+        margin: auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        text-align: center;
+        @media screen and (#{$bp-960}) {
+            padding-top: 50px;
+            padding-bottom: 0;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 2.75rem;
+            @media screen and (#{$bp-1440}) {
+                padding: 0;
+                margin-bottom: 1.75rem;
+            }
+            @media screen and (#{$bp-960}) {
+              font-size: .6125rem;
+              margin-bottom: 1rem;
+            }
+        }
+    }
+    .swiper-button-wrapper {
+        position: absolute;
+        width: 100%;
+        max-width: 1740px;
+        margin: auto;
+        padding-top: 0;
+        top: 50%;
+        .swiper-button-next {
+            position: absolute;
+            right: 0;
+            margin-right: 10px;
+            transform: translateY(-50%);
+
+        }
+        .swiper-button-prev {
+            position: absolute;
+            left: 0;
+            margin-left: 10px;
+            transform: translateY(-50%);
+        }
+    }
+}

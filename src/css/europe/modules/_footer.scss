@@ -1,0 +1,8 @@
+@media screen and (max-width: 400px) {
+  .support span {
+    display: block;
+  }
+  .support [class^="icon-"]:before {
+    margin: 0;
+  }
+}

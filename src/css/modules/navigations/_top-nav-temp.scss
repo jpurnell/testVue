@@ -1,0 +1,282 @@
+/* Top Nav */
+.top-nav {
+    padding: 0;
+    margin: 0;
+    font-family:$didot;
+    ul,
+    li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+   
+    a {
+        display: block;
+        padding:15px 25px;
+        &:hover{
+            color:$orange-brown;
+        }
+
+     }
+
+    >li {
+        display: inline-block;
+        position: relative;
+        &:last-child a{
+            padding-right: 0;
+        }
+        >a {
+            text-transform: uppercase;
+            padding: 25px;
+            span {
+                position: relative;
+
+            }
+
+            +div {
+                display: none;
+                padding: 20px;
+                text-align: left;
+            }         
+
+        }
+
+        &:hover > a > span:after {
+            content: "";
+            width: 9px;
+            height: 69%;
+            background: $orange-brown;
+            display: inline-block;
+            position: absolute;
+            bottom: 3.5px;
+            left: -14px;
+            .touchevents &{
+                display: none;
+            }
+            @media screen and (#{$bp-960}) {
+                bottom: auto;
+                top:4px;
+            }
+        }
+
+        li {
+            display: inline-block;
+            font-size: 18px;
+            text-transform: none;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid-column;
+            display: table;
+
+            a {
+                padding:6px 25px;
+                color:#5f5f5f;
+              
+            }
+
+        }
+
+        @media screen and (#{$bp-960}) {
+            display: block;
+            text-align: left;
+            font-size: 24px;
+            display: block;
+        }
+    }
+
+    h3
+    li {
+
+        p {
+            margin: 0;
+        }
+
+    }
+
+    @media screen and (#{$bp-1024-min}) {
+        >li {
+            &:hover {
+                >div {
+                    padding: 0;
+                    display: table;
+                    visibility: visible;
+                    left: auto;
+                    left:-100%;
+                    position: absolute;
+                    z-index: 99;
+                    zoom: 1;
+                    width: 420px;
+
+                    >ul {
+                        margin: 0;
+                        overflow: hidden;
+                        padding: 35px 35px 50px 35px;
+                        background: $white;
+                        border-top: 1px solid $beige;
+                        min-height: 290px;
+                        @include big-drop-shadow;
+                    }
+                }
+
+                @media screen and (#{$bp-960}) {
+                    display: none;
+                    a{
+                        background: #f5f5f5;
+                    }
+                }
+            }
+            &.rhrdiscoverer:hover > div,
+            &.nav-7:hover > div,
+            &.scent:hover > div{
+                left:auto;
+                right:0;
+            }
+            &.rhrbed:hover > div,
+            &.nav-1:hover > div{
+                left:-45%;
+                right:auto;
+            } 
+            &.scent:hover > div,
+            &.nav-6:hover > div{
+                left:auto;
+                right:-128%;
+            }                         
+        }
+    }
+
+    @media screen and (#{$bp-1024-min}) {
+        display: block !important;
+        height: auto !important;
+
+        >li>a span {
+            display: inline-block;
+            position: relative;
+        }
+    }
+
+    @media screen and (#{$bp-1024}) {
+        width: 100%;
+        display: none;
+        left: 0;
+        margin: 0;
+        z-index: 15;
+        border: 0;
+        font-size: 2em;
+        position: relative;
+        top: 0;
+        border-top: 1px solid $beige;
+
+    }
+
+    @media screen and (#{$bp-660}) {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top:0;
+        right: auto;
+        float: none;
+        clear: both;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+
+        li a {
+            display: block;
+            padding:15px 2% 15px 15%;
+        }
+    }
+
+}
+
+body{
+    transition: 0.9s ease;
+}
+@media screen and (#{$bp-1024-min}) {
+    header{
+        .main-nav{
+            .open-menu{
+                //display: none;
+            }
+        }
+    }
+}
+header{
+    .open-menu {
+    position: fixed;
+    cursor: pointer;
+    z-index: 6;
+    top:0;
+    .pgcheckout &{
+        display: none;
+    }
+    }
+    .open-menu .line {
+    display: block;
+    height: 2px;
+    width: 40px;
+    background-color: $dark-grey;
+    margin: 10.5px auto;
+    transition: all 0.3s ease-in-out;
+    transform-origin: 50% 50%;
+    }
+
+    .main-nav .open-menu.active {
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition: all 0.2s ease-in-out 0.4s;
+    & .line {
+        background-color: #000;
+    }
+    & .line:nth-child(2) {
+        width: 0px;
+    }
+    
+    & .line:nth-child(1) {
+        transform: translateY(13px);
+        transition-delay: 0.2s;
+    }
+    & .line:nth-child(3) {
+        transform: translateY(-12px) rotate(90deg);
+        transition-delay: 0.2s;
+    }
+    }
+    .open-menu.active{
+        z-index: 99999999;
+    }
+    .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.75);
+        z-index: 3;
+        opacity: 0;
+        display: none;
+        transition: 0.3s ease;
+        &.open {
+            opacity: 1;
+            display: block;
+        }
+    }
+    .overlay.open {
+    height: 100vh;
+    z-index: 99999998;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 2.5rem;
+        line-height: 3.4375rem;
+    }
+    li {
+        padding-left: 20px;
+        position: relative;
+        opacity: 0;
+        color: #000;
+        transform: translateY(50px);
+        transition-duration: 0.2s;
+    }
+    
+}

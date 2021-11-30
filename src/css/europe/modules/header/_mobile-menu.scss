@@ -1,0 +1,164 @@
+/*Mobile Menu*/
+.mobile-menu-trigger {
+  float: right;
+  position: relative;
+  font-size: 1.5em;
+  @include overlay;
+  @include open-menu;
+  .open-menu {
+    .icon-drawer {
+      right: 5px;
+    }
+    .icon-close {
+      right: 0;
+      @media screen and ($bp-1024) {
+        position: fixed;
+        right: 15px;
+      }
+    }
+  }
+  .line,
+  ul {
+    position: relative;
+    opacity: 0;
+    transform: translateX(180px);
+    transition-duration: 0.3s;
+  }
+  .menu-overlay.open {
+    width: 100% !important;
+  }
+  .menu-overlay.open .line,
+  .menu-overlay.open ul {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.6s ease-out 0.2s, transform 0.6s 0.2s ease-out;
+    transition-delay: 0.7s;
+  }
+  li {
+    list-style: none;
+    cursor: pointer;
+    > span {
+      text-transform: uppercase;
+    }
+  }
+  ul {
+    margin: 0 0 1em 0;
+    padding: 0 2% 0 48px;
+    @media screen and (max-width: 440px) {
+      padding-left: 38px;
+    }
+  }
+  h4 {
+    text-transform: uppercase;
+    @media screen and (max-width: 480px) {
+      .en &, .fr &, .es &, .de & {
+        font-size: 5.5vw;
+      }
+    }
+  }
+  a {
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+    .logout {
+      text-decoration: underline;
+    }
+  }
+  a, p, li {
+    font-family: $typography-main-heading;
+  }
+}
+
+.mobile-menu-panel .more-menu-panel {
+  .account-panel {
+    .register-panel {
+      background: none;
+      .close {
+        display: none;
+      }
+    }
+  }
+}
+
+.mobile-menu-panel .close-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu-panel .lang-panel .close-btn,
+.mobile-menu-panel .currency-panel-mob .close-btn {
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 3;
+}
+
+.currency-panel-mob {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  height: 100vh;
+  div {
+    margin: 80px 15% 3% 15%;
+  }
+}
+
+// Previously scoped
+.mobile-menu-panel {
+  .content {
+    padding: 140px 2% 0 10%;
+    background: none;
+  }
+  .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 2%;
+    cursor: pointer;
+    .q-icon {
+      font-size: 33px;
+      line-height: 33px;
+      margin: 0 15px 0 0;
+      width: 33px;
+      top: -3px;
+    }
+    p {
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+  .line-islogin {
+    cursor: default;
+  }
+  @media screen and (max-width: 660px) {
+    .more-menu-panel {
+      width: 100%;
+      z-index: 4;
+    }
+    .content {
+      padding: 80px 2% 0 10%;
+    }
+  }
+  
+  @media screen and (max-width: 599px) {
+    .lang-currency-heading {
+      white-space: nowrap;
+      letter-spacing: 0.1em;
+    }
+  }
+  @media screen and (max-width: 440px) {
+    .more-menu-panel {
+      .content {
+        padding: 80px 5% 0 5%;
+      }
+      .q-icon {
+        font-size: 24px;
+        width: 24px;
+      }
+    }
+  }  
+}

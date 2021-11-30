@@ -1,0 +1,53 @@
+
+//IE11
+@media all and (-ms-high-contrast: none) {
+	*::-ms-backdrop,
+	[data-aos^="fade"][data-aos^="fade"],
+	[data-aos^="zoom"][data-aos^="zoom"] {
+	  opacity: 1;
+	}
+	nav ul>li a span:after, nav ul>li a span:before{
+	  display: none;
+	}
+  .similar-items img {
+    flex-shrink: 0;
+  }
+}
+  .IE11{
+	.linen-products :nth-child(2).linen-product-wrap{
+		padding:200px 22px 22px 22px;
+	}
+  }
+//IE10
+  .ie10{
+	[data-aos^=fade][data-aos^=fade],
+	[data-aos^="zoom"][data-aos^="zoom"]{
+		opacity: 1;
+	}
+	nav ul>li a span:after, nav ul>li a span:before{
+		display: none;
+	  }
+	.content *, .seo-copy *{
+		opacity: 1 !important;
+		transform:none !important;
+	}
+	nav{
+		ul{
+			display: block;
+			> li{
+				float:left;
+				a{
+					padding: 20px 30px;
+					display: block;
+				}
+			}
+		}
+	}
+	.branding-hero{
+		float:left;
+	}
+	.outer-wrap{
+		position: relative;
+		float:right;
+	}
+  }

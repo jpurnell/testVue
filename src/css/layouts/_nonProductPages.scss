@@ -1,0 +1,278 @@
+/*404s & error pages */
+
+.faq-support  {
+
+    @media screen and (#{$bp-660}) {
+        display: block;
+        padding: 2% 0 0 0;
+        a{
+            border:none;
+            width:50%;
+            display: inline-block;
+            float: left;
+        }
+    }   
+}
+
+.faq-support {
+    @include site-width-wrap;
+    text-transform: uppercase;
+    padding: 0;
+    font-family: $didot;
+    @include horz-align;    
+    margin: 2% auto 0 auto;
+    background-color: rgba($beige, .5) ;
+        @media screen and (#{$bp-660}) {
+        display: flex;
+        a{
+            border-right: rgba($beige, .5) solid 1px;
+            width:auto;
+            display: inline-block;
+            float: none;
+            min-height: 140px;
+        }
+    }
+    a {
+        padding: 20px 0;
+        border-right: $white 1px solid;
+        border-top:5px solid $beige;
+        display: inline-block;
+        text-align: center;
+        flex: 5;
+        -ms-flex: 5; 
+        &:hover {
+            background-color: rgba($beige, .5);
+            border-top:5px solid rgba($beige, .5);
+        }        
+        &:last-child {
+            border-right: none;
+        }
+        &.faq-active {
+            background: $white;
+            display: block;
+            border-top: 5px solid $orange-brown;
+        }
+    }
+
+    [class^=icon-]:before {
+        display: block;
+        font-size: 44px;
+        padding: 0 0 25px;
+    }
+
+}  
+.pgerror {
+    .tagline{
+        padding: 1% 3% 5% 3%;
+        margin: 1% 0;
+        font-size: 1.1em;
+        float: left;
+        @media screen and (#{$bp-768-min}) {
+            width:50%;
+            border-right:1px solid $beige;        
+        }
+        &:before {
+            display: none;
+        }
+    }
+    .contact-box{
+        padding:2% 4% ;
+        @media screen and (#{$bp-768-min}) {
+            width:50%;
+            float:right;
+            padding:2% ;     
+        }        
+    }   
+
+    .hotel-logo {
+        position: static;
+        margin: 3% auto 0 auto;
+    }
+    .tagline p span {
+        display: inline-block;
+    }
+
+}
+
+.faq {
+    padding:4% 0;
+    min-height: 500px;
+    padding-bottom: 72px;
+    @include site-width-wrap;
+    @media screen and (#{$bp-1440}) {
+        padding:4% 2%;
+    }
+    h3 {
+        padding: 20px 0px;
+    }
+    p {
+        a {
+            text-decoration: underline;
+        }
+    }
+    .pgOffline &{
+        padding:4% 2%;
+    }
+    .list li {
+        padding: 10px 0;
+    }
+    .shippingDetails{
+        width:480px;
+        @media screen and (#{$bp-660}) {
+            width:100%;
+        }
+    }
+}
+
+.pgfaq,
+.pgcart,
+.checkout-cart-index{
+    .container {
+       background:$white;
+  
+    @media screen and (#{$bp-768}) {
+        h1{
+            margin:20px 0;
+        }
+        h3{
+            font-size:18px;
+        }
+        .faq-support {
+            a{
+            font-size: 12px;
+            padding:10px 0;
+           [class^=icon-]:before{
+            padding-bottom: 12px;
+            min-height: 128px;
+           }
+        }
+    }
+
+    }
+      }
+
+}
+
+.pgfaq {
+    .contact-form ul {
+        list-style-type: none;
+        margin: 0;
+        padding:0;
+        li {
+            padding: 8px 0px;
+            input,
+            select,
+            textarea {
+                width: 500px;
+                border:1px solid $beige;
+            }
+        }
+        [class^=btn-] {
+            width: 500px;
+            margin: 8px 0px 0px 200px;
+        }
+        .g-recaptcha {
+            padding-left: 200px;
+        }
+    }
+    fieldset label {
+        width: 200px;
+    }
+}
+
+@media screen and (#{$bp-960}) {
+    .faq {
+        min-height: 200px;
+    }
+    .pgerror {
+        .stack {
+            width: 100%;
+            &.left,
+            &.right {
+                float: none;
+            }
+        }
+    }
+    .pgfaq {
+        .contact-form ul {
+            list-style-type: none;
+            li {
+                padding: 8px 0px;
+                input,
+                select,
+                textarea {
+                    width: 98%;
+                }
+            }
+            [class^=btn-] {
+                margin: 8px 0px 0px 0px;
+                width: 98%;
+            }
+            .g-recaptcha {
+                padding-left: 0;
+            }
+        }
+    }
+}
+#pgorder .shop-cart{
+    display: none;
+}
+@media screen and ($bp-768){
+    #category-nav{
+        display: block;
+          width: 100%;
+          a {
+            width: 100%;
+            display: inline-block;
+            min-height: 3px;
+            padding: 16px 0 16px 40px;
+            background: $white;
+            text-align: left;
+            border-top:none;
+            border-bottom: 5px solid #dadada;
+            position: relative;
+            &:before {
+              position: absolute;
+              left:10px;
+              top:10px;
+            }
+            &.faq-active{
+              border-bottom: 5px solid $orange-brown;
+              border-top:none;
+              background: #efefef;
+            }
+            &.icon-mail{
+              margin-bottom: 10px;
+            }
+            &:hover{
+              background: #efefef;
+            }
+          }
+        }
+        .contact-form ul{
+          padding-left: 0;
+        }
+
+        .faq{
+   
+            .shippingDetails{
+            min-width:0px;
+            width:100%;
+        
+            }
+            a.paypalwrap{
+                word-wrap: break-word;
+            }
+        }
+    .faq-support [class^=icon-]:before{
+        font-size:22px;
+        padding:0;
+    }
+    }
+.tagline-wrap{
+    padding: 3% 0;
+    @include site-width-wrap;
+    @media screen and (#{$bp-1440}) {
+        padding:3% 2%;
+    }
+}
